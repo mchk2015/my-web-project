@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Covert a Decimal to a Hexadecimal (input type = number)</title>
+		<style rel="stylesheet" type="text/css">
+		input[type=number] {
+			-moz-appearance: textfield; <!-- suppress the number spinner -->
+		}
+		</style>
+	</head>	
+	<body>
+		<form>	
+			<p><label>Input a Decimal Number : <input type="number" onchange="ToHex(this)" name="quantity" /></label></p>
+   		</form>		
+		<script type="text/javascript">
+			function ToHex(decInNumber){
+			var inDec = new Number(decInNumber.value);
+			var inHex = inDec.toString(16);		
+			alert("The Decimal " + inDec +  " in Hexadecimal is " + inHex);	
+			}
+ 		</script>			
+	</body>
+</html>
