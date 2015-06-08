@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Covert a Decimal to a Hexadecimal</title>
+	</head>	
+	<body>
+		<form>
+			<p><label>Input a Decimal Number : <input type="text" id="dectext" name="input decimal in text" /></label><p>
+			<p><button type="submit" value="Get Input Text" onClick="ToHex(document.getElementById('dectext'))">Submit</button></p>
+   		</form>		
+		<script type="text/javascript">
+			function ToHex(decInText){
+			var inDec = new Number(decInText.value)
+			var inHex = inDec.toString(16);		
+			alert("The Decimal " + inDec +  " in Hexadecimal is " + inHex);	
+			}
+ 		</script>			
+	</body>
+</html>
