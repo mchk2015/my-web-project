@@ -3,18 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Covert a Decimal to a Hexadecimal (input type = text)</title>
-	</head>	
-	<body>
-		<form>
-			<p><label>Input a Decimal Number : <input type="text" id="dectext" name="text" /></label><p>
-			<p><button type="submit" value="Get Input Text" onclick="ToHex(document.getElementById('dectext'))">Submit</button></p>
-   		</form>		
 		<script type="text/javascript">
 			function ToHex(decInText){
 			var inDec = parseFloat(decInText.value); // avoid using new Number(), use parseInt or parseFloat instead
 			var inHex = inDec.toString(16);		
-			alert("The Decimal " + inDec +  " in Hexadecimal is " + inHex);	
+			alert("The Decimal " + inDec +  " in Hexadecimal is " + inHex.toUpperCase());	
 			}
  		</script>			
+	</head>	
+	<body>
+		<form>
+			<p><label>Input a Decimal Number : <input type="text" id="dectext" name="text" /></label><p>
+			<p><input type="submit" onclick="ToHex(document.getElementById('dectext'))" value="Submit" /></p>
+   		</form>		
 	</body>
 </html>
