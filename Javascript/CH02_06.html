@@ -4,7 +4,71 @@
 		<meta charset="UTF-8" />
 		<title>Applying Logic, Math Operations and Working with Dates</title>
 		<script type="text/javascript">
-		
+			document.write("<p><h1>Applying Logic</h1></p>");
+				<!-- Determining if an Object is Equal to or Less than Another -->
+					document.write("<br />");
+				<!-- Adding Conditional Blocks of Code -->
+					document.write("<br />");
+				<!-- Using a While Loop -->
+					document.write("<br />");
+				<!-- Iterating Through Arrays -->
+					document.write("<br />");
+				<!-- Iterating Through Object Properties -->
+					document.write("<br />");
+			document.write("<hr />");
+			
+			document.write("<p><h1>Math Operations</h1></p>");
+				<!-- Math Object Properties-->
+					document.write("<br />");
+				<!-- Generating Random Numbers -->
+					document.write("<br />");
+				<!-- Rounding Numbers -->
+					document.write("<br />");
+				<!-- Getting the Minimum Number in a Set -->
+					document.write("<br />");
+				<!-- Getting the Maximum Number in a Set-->
+					document.write("<br />");
+				<!-- Calculating Absolute Value -->
+					document.write("<br />");
+				<!-- Applying Trigonometric Functions -->
+					document.write("<br />");
+				<!-- Match Object Trigonometric Methods -->
+					document.write("<br />");
+				<!-- Applying Power Functions -->
+					document.write("<br />");				
+			document.write("<hr />");
+			
+			document.write("<p><h1>Working with Dates</h1></p>");
+				<!-- Creating a Date Object -->
+					document.write("<br />");
+				<!-- Getting the Current Date and Time -->
+					var today = new Date();
+					document.write(today);
+					document.write("<br />");
+				<!-- Creating a Date String -->
+					document.write("<br />");
+				<!-- Creating a Time String -->
+					document.write("<br />");
+				<!-- Getting a Time Delta -->
+					document.write("<br />");					
+				<!-- Getting Specific Date Components -->
+					document.write("<br />");
+				<!-- A Comprehensive Illustrated Example-->
+					var atime = new Date("2014-01-04T08:45:22.356Z");
+					var btime = new Date("2014-01-04T12:12:57.758Z");
+					var delta = Math.abs(btime - atime); // 12455402 milliseconds
+					var totalSec = Math.floor(delta * .001); // 12455 seconds
+					var hours = Math.floor(totalSec / 3600); // 3hrs
+					var minutes = Math.floor(totalSec / 60) % 60; // 27mins
+					var seconds = totalSec % 3600 % 60; // 35secs
+					document.write("The difference between <strong>" + atime + "</strong> and <strong> \ " 
+					                     + btime + "</strong> is : <br />");
+					document.write("Total Milliseconds: " + delta + "<br>");
+					document.write("Total Seconds: " + totalSec + "<br>");
+					document.write("Delta: " + hours + "hrs ");
+					document.write(minutes + "mins " + seconds + "secs");					
+					document.write("<br />");
+			document.write("<hr />");		
 		</script>
 	</head>
 	<body>
