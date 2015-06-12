@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<title>jQuery and JavaScript Phrasebook</title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var av1 = document.getElementsByTagName("html")[0].getAttribute("lang");
+				document.getElementById("placeholder1").innerHTML = av1;
+				var av2 = document.getElementsByTagName("a")[0].getAttribute("href");
+				document.getElementById("placeholder2").innerHTML = av2;
+				var nv1 = document.getElementsByTagName("h3")[0].childNodes[0].nodeValue;
+				document.getElementById("placeholder3").innerHTML = nv1;
+				var nv2 = document.getElementsByTagName("h3")[1].firstChild.nodeValue;
+				document.getElementById("placeholder4").innerHTML = nv2;
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>jQuery and JavaScript Phrasebook</h1>
+		</header>
+		<section>
+			<h2>Table of Content</h2>
+			<article>
+				<h3>Chapter 1 Jumping into jQuery, JavaScript, and the World of Dynamic Web Development</h3>
+				<p><a href="CH01_01.html">CH01_01 Adding JavaScript to an HTML Document</a></p>
+				<p><a href="CH01_02.html">CH01_02 Loading JavaScript from External Files</a></p>
+				<p><a href="CH01_03.html">CH01_03 Loading jQuery (a library) in Your Web Pages</a></p>
+				<p><a href="CH01_04.html">CH01_04 Loading jQuery UI (a library) in Your Web Pages</a></p>
+				<p><a href="CH01_05.html">CH01_05 Loading jQuery Mobile (a library) in Your Web Pages</a></p>
+			</article>
+			<article>
+				<h3>Chapter 2 Using the JavaScript Language</h3>
+				<p><a href="CH02_01.html">CH02_01 Defining and Accessing Data</a></p>
+				<p><a href="CH02_02.html">CH02_02 Creating Arrays</a></p>
+				<p><a href="CH02_03.html">CH02_03 Creating Objects</a></p>
+				<p><a href="CH02_04.html">CH02_04 Defining Functions</a></p>
+				<p><a href="CH02_05_1.html">CH02_05_1 Manipulating Strings</a></p>
+				<p><a href="CH02_05_2.html">CH02_05_2 Manipulating Arrays</a></p>
+				<p><a href="CH02_06.html">CH02_06 Applying Logic, Math Operations and Working with Dates</a></p>
+			</article>
+		</section>
+		<hr />
+		<section>
+			<h2>Display the results of finding attribute value and node value:</h2>
+			<p id="placeholder1"></p>
+			<p id="placeholder2"></p>
+			<p id="placeholder3"></p>
+			<p id="placeholder4"></p>			
+		</section>
+	</body>
+</html>
