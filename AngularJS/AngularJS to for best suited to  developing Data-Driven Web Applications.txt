@@ -1,1 +1,15 @@
+AngularJS Homepage:
+https://angularjs.org/
+
+AngularJS 開發框架介紹:
+http://blog.miniasp.com/post/2013/04/24/Front-end-Engineering-Fineart-An-Introduction-to-AngularJS.aspx
+
+AngularJS Tutorial:
+http://www.tutorialspoint.com/angularjs/angularjs_environment.htm
+
+--------------------------------------------------------------------------------------------------------
+AngularJS 最佳實踐:
 http://www.lovelucy.info/angularjs-best-practices.html
+
+AngularJS Best Practices (Youtube):
+https://www.youtube.com/watch?v=ZhfUv0spHCY
