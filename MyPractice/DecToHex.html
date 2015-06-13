@@ -7,14 +7,13 @@
 			function ToHex(decInText){
 			var inDec = parseFloat(decInText.value); // avoid using new Number(), use parseInt or parseFloat instead
 			var inHex = inDec.toString(16);		
-			alert("The Decimal " + inDec +  " in Hexadecimal is " + inHex.toUpperCase());	
+			document.getElementById("placeholder").innerHTML = "The Decimal " + inDec +  " in Hexadecimal is " + inHex.toUpperCase();
 			}
  		</script>			
 	</head>	
 	<body>
-		<form>
-			<p><label>Input a Decimal Number : <input type="text" id="dectext" name="text" /></label><p>
-			<p><input type="submit" onclick="ToHex(document.getElementById('dectext'))" value="Submit" /></p>
-   		</form>		
+		<p><label>Input a Decimal Number : <input type="text" id="dectext" name="text" /></label><p>
+		<p><input type="submit" onclick="ToHex(document.getElementById('dectext'))" value="Submit" /></p>
+		<p id="placeholder"></p>
 	</body>
 </html>

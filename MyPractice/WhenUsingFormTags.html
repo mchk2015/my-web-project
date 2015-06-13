@@ -19,7 +19,7 @@
 	<body>	
 	<form>
 		<div><span>How old are you? <input type="number" id="howOld" /></span>
-		     <span><input type="submit" onclick="myAge(getElementById('howOld')); return false;" value="Submit" /></span>
+		     <span><input type="button" onclick="myAge(getElementById('howOld')); return false;" value="Submit" /></span>
 			 <!-- If using <form> tags, you must add "return false" to any input action(e.g.onclick) to suppress the action
 			      signal to send to <form> which actually contains no action attribute to take. Otherwise, the web page will 
 			      get refreshed and make the output disappear almost immediately! 
