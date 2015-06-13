@@ -6,35 +6,115 @@
 		<script type="text/javascript">
 			document.write("<p><h1>Applying Logic</h1></p>");
 				<!-- Determining if an Object is Equal to or Less than Another -->
+					var x = 5;
+					var y = "5";
+					var resultA = x==y; // is x equal to y regardless of data type ? true
+					var resultB = x===y; // is x equal to y when data type is taken into account ? false
+					document.write(resultA); 
+					document.write(", ");
+					document.write(resultB);
 					document.write("<br />");
 				<!-- Adding Conditional Blocks of Code -->
+					var age = 33;
+					if (age >= 100) {
+						document.write("Wow you're a centurian!");
+					} else if (age >=18) {
+						document.write("You're an adult.");     // returns this as age 33 >= 18
+					} else {
+						document.write("You are a child.");
+					}
 					document.write("<br />");
 				<!-- Using a While Loop -->
+					var weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+					do { 
+						var day = weekdays.pop();  // this cut out the last item of the array weekdays to day
+						document.write(day + ", ");
+					} while (day != "Wed");   // returns Fri, then, Thu, and finally Wed
 					document.write("<br />");
-				<!-- Iterating Through Arrays -->
+				<!-- Iterating Through Arrays -->				
+					var weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+					for (var x=0; x < weekdays.length; x++){ // length = 5
+						document.write(weekdays[x] + "|"); //returns Mon|Tue|Wed|Thu|Fri
+					}
 					document.write("<br />");
 				<!-- Iterating Through Object Properties -->
+					var obj = {FN:"Michael", LN:"Chan", Title:"Manager"}; // array of object is embraced in curly, not square brackets
+					for (var key in obj) {   // an item in an array of objects obj is key:obj[key]
+						document.write(key + "=" + obj[key] + " & "); // returns FN=Michael & LN=Chan & Title=Manager &
+					}
 					document.write("<br />");
 			document.write("<hr />");
 			
 			document.write("<p><h1>Math Operations</h1></p>");
 				<!-- Math Object Properties-->
+					document.write(Math.PI + ", " + Math.E); // Pi and Euler's number(aka Exponential e)
 					document.write("<br />");
+					document.write(Math.LN2 + ", " + Math.LN10); // Natural log of 2 nd 10
+					document.write("<br />");
+					document.write(Math.LOG2E + ", " + Math.LOG10E); // Base-2 and Base-10 log of Exponential e
+					document.write("<br />");
+					document.write(Math.SQRT1_2 + ", " + Math.SQRT2); // square root of 1/2 and 2
+					document.write("<br />------<br />");  // if rounding with 3 decimals, use the function "toFixed(3)"
 				<!-- Generating Random Numbers -->
+					document.write(Math.random()); // returns a random number between 0 and 1
 					document.write("<br />");
-				<!-- Rounding Numbers -->
+					document.write(Math.floor(Math.random() * 10) + 1); // returns a random number between 1 and 10
 					document.write("<br />");
+					document.write(Math.floor(Math.random() * 20) - 10); // returns a random number between -10 and 10
+					document.write("<br />------<br />");
+				<!-- Rounding, Ceiling and, Flooring Numbers -->
+					var x = 3.4;
+					var y = 3.5;
+					document.write(Math.round(x) + ", " + Math.round(y)); // returns 3, 4
+					document.write("<br />");
+					document.write(Math.ceil(x) + ", " + Math.ceil(y)); // returns 4, 4
+					document.write("<br />");
+					document.write(Math.floor(x) + ", " + Math.floor(y)); // returns 3, 3
+					document.write("<br />------<br />");	
 				<!-- Getting the Minimum Number in a Set -->
+					document.write(Math.min(8,"0x5",12,"44",8,23,77)); //returns 5
 					document.write("<br />");
+					var arr1 = [4,8,12,3,7,11];
+					document.write(Math.min.apply( Math, arr1 )); //returns 3
+					document.write("<br />");
+					var arr2 = ["0x5",8,12,"4",8,23,77,"0x1F"];
+					document.write(Math.min.apply( Math, arr2 )); //returns 4
+					document.write("<br />------<br />");
 				<!-- Getting the Maximum Number in a Set-->
+					document.write(Math.max(8,"0x5",12,"44",8,23,77)); //returns 77
 					document.write("<br />");
+					var arr1 = [4,8,12,3,7,11];
+					document.write(Math.max.apply( Math, arr1 )); //returns 12
+					document.write("<br />");
+					var arr2 = ["0x5",8,12,"4",308,23,77,"0xFF"];
+					document.write(Math.max.apply( Math, arr2 )); //returns 308
+					document.write("<br />------<br />");
 				<!-- Calculating Absolute Value -->
+					document.write(Math.abs(-5)); //returns 5
 					document.write("<br />");
+					document.write(Math.abs(5)); //returns 5
+					document.write("<br />");
+					document.write(Math.abs("-15")); //returns 15
+					document.write("<br />");
+					document.write(Math.abs("0xFF")); //returns 255
+					document.write("<br />------<br />");
 				<!-- Applying Trigonometric Functions -->
+					document.write(Math.log(2)); //returns approx 0.693, exactly equal to Math.LN2 above
 					document.write("<br />");
+					document.write(Math.sin(0)); //returns 0
+					document.write("<br />");
+					document.write(Math.cos(0)); //returns 1
+					document.write("<br />");
+					document.write(Math.tan(1)); //returns approx 1.557
+					document.write("<br />------<br />");
 				<!-- Match Object Trigonometric Methods -->
-					document.write("<br />");
-				<!-- Applying Power Functions -->
+					document.write("<br />------<br />");
+				<!-- Applying Exponential, Power, and Squart Root Functions -->
+					document.write(Math.exp(4)); //returns approx 54.59815, i.e. Exponential e^4
+					document.write("<br />");	
+					document.write(Math.pow(2,16)); //returns 65536 , i.e. 2^16
+					document.write("<br />");	
+					document.write(Math.sqrt(25)); //returns 5, i.e. squart root of 25
 					document.write("<br />");				
 			document.write("<hr />");
 			
