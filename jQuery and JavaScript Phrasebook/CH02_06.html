@@ -108,6 +108,21 @@
 					document.write(Math.tan(1)); //returns approx 1.557
 					document.write("<br />------<br />");
 				<!-- Match Object Trigonometric Methods -->
+					document.write(Math.acos(0.5)); // returns the arccosine of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.asin(0.5)); // returns the arcsine of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.atan(0.5)); // returns the arctangent of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.atan2(0.5,0.5)); // returns the arctangent of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.cos(0.5)); // returns the cosine of 0.5 (0.5 is in radians)
+					document.write("<br />");
+					document.write(Math.sin(0.5)); // returns the sine of 0.5 (0.5 is in radians)
+					document.write("<br />");
+					document.write(Math.tan(0.5)); // returns the tangent of an angle
+					document.write("<br />");
+					document.write(Math.log(0.5)); // returns the natural logarithm (base E) of 0.5
 					document.write("<br />------<br />");
 				<!-- Applying Exponential, Power, and Squart Root Functions -->
 					document.write(Math.exp(4)); //returns approx 54.59815, i.e. Exponential e^4
@@ -120,19 +135,82 @@
 			
 			document.write("<p><h1>Working with Dates</h1></p>");
 				<!-- Creating a Date Object -->
+					var d1 = new Date(); 		// new date()
+					document.write(d1); 		// returns current date and time
 					document.write("<br />");
-				<!-- Getting the Current Date and Time -->
-					var today = new Date();
-					document.write(today);
+					var d2 = new Date(1434400177000); // new Date(in ms since 1-1-1970 12:00:00)
+					document.write(d2);   			  //returns Tue Jun 16 2015 04:29:37 GMT+0800
 					document.write("<br />");
+					var d3 = new Date("June 16 2015 13:55:12 GMT+0800"); // new Date(dateString)
+					document.write(d3);									 //returns Tue Jun 16 2015 13:55:12 GMT+0800
+					document.write("<br />");
+					var d4 = new Date("1/30/2020"); // new Date(dateString)
+					document.write(d4); 			//returns Sat Jan 30 2020 00:00:00 GMT+0800
+					document.write("<br />");
+					var d5 = new Date("12/25/2015 12:12:12"); // new Date(dateString)
+					document.write(d5);						  //returns Wed Dec 25 2015 12:12:12 GMT+0800
+					document.write("<br />");
+					var d6 = new Date(2016, 11, 10, 16, 5, 10, 3); // new Date(year, month, day, hrs, mins, secs, ms);
+					document.write(d6);							   //returns Sat Dec 10 2016 16:05:10 GMT+0800
+					document.write("<br />------<br />");
+				<!-- Getting the Current Date and Time -->				
+					var today = new Date();					// new date()
+					document.write(today);					// returns current date and time
+					document.write("<br />------<br />");
 				<!-- Creating a Date String -->
+					var d = new Date();						// new date() object with current date 
+					document.write(d.toString());			// in full date string e.g. Tue Jun 16 2015 04:29:37 GMT+0800
 					document.write("<br />");
+					document.write(d.toDateString()); 		// in abbreviated date string e.g. Tue Jun 16 2015
+					document.write("<br />");
+					document.write(d.toLocaleDateString());	// in localized date string e.g. 6/16/2015
+					document.write("<br />");
+					document.write(d.toISOString());		// in ISO standardized date string e.g. 2015-06-15T20:29:37.846Z
+					document.write("<br />");
+					document.write(d.toUTCString());		// in UTC time date string e.g. Mon, 15 Jun 2015 20:29:37 GMT					
+					document.write("<br />------<br />");
 				<!-- Creating a Time String -->
+					var d = new Date();						// new date() object with current date 
+					document.write(d.toTimeString());		// in full time string e.g. 04:29:37 GMT+0800
 					document.write("<br />");
+					document.write(d.toLocaleTimeString());	// in localized time string e.g. 4:29:37 AM
+					document.write("<br />------<br />");	
 				<!-- Getting a Time Delta -->
-					document.write("<br />");					
-				<!-- Getting Specific Date Components -->
+					var atime = new Date("2014-01-04T08:45:22.356Z");
+					var btime = new Date("2014-01-04T12:12:57.758Z");
+					var delta = Math.abs(btime - atime); 			//12455402ms
+					document.write(delta);
 					document.write("<br />");
+					var totalSec = Math.floor(delta * .001); 		//12455s
+					document.write(totalSec);
+					document.write("<br />");
+					var hours = Math.floor(totalSec / 3600); 		//3hrs	
+					document.write(hours);
+					document.write("<br />");
+					var minutes = Math.floor(totalSec / 60) % 60; 	//27mins
+					document.write(minutes);
+					document.write("<br />");
+					var seconds = totalSec % 3600 % 60; 			//35secs
+					document.write(seconds);
+					document.write("<br />------<br />");				
+				<!-- Getting Specific Date Components -->
+					var d = new Date("Tue Jun 16 2015 04:29:37 GMT+0800");
+					document.write(d.getDate()); 			//returns 16
+					document.write("<br />");
+					document.write(d.getDay()); 			//returns 2 (i.e. Tue)
+					document.write("<br />");
+					document.write(d.getFullYear()); 		//returns 2015
+					document.write("<br />");
+					document.write(d.getHours()); 			//returns 4
+					document.write("<br />");
+					document.write(d.getMinutes()); 		//returns 29
+					document.write("<br />");
+					document.write(d.getSeconds()); 		//returns 37
+					document.write("<br />");
+					document.write(d.getTime()); 			//returns 1434400177000 (in ms since 1-1-1970 12:00:00)
+					document.write("<br />");
+					document.write(d.getTimezoneOffset()); 	//returns -480 (i.e. UTC time - local time in minutes)
+					document.write("<br />------<br />");	
 				<!-- A Comprehensive Illustrated Example-->
 					var atime = new Date("2014-01-04T08:45:22.356Z");
 					var btime = new Date("2014-01-04T12:12:57.758Z");
