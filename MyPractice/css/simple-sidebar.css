@@ -48,11 +48,22 @@
     margin-right: -250px;
 }
 
+/* Image on Top of Sidebar Style */
+
+.image-responsive {
+    position: absolute;
+    top: 10px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 /* Sidebar Styles */
 
 .sidebar-nav {
     position: absolute;
-    top: 80px;
+    top: 180px;
     width: 250px;
     margin: 0;
     padding: 0;
