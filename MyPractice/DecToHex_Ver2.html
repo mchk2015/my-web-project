@@ -10,7 +10,7 @@
 		</style>
 		<script type="text/javascript">
 			function ToHex(decInNumber){
-			var inDec = parseFloat(decInNumber.value); // avoid using new Number(), use parseInt or parseFloat instead
+			var inDec = Number(decInNumber.value); // avoid using new Number(); use Number(), parseInt() or parseFloat() instead
 			var inHex = inDec.toString(16);	
 			document.getElementById("placeholder").innerHTML = "The Decimal " + inDec +  " in Hexadecimal is " + inHex.toUpperCase();	
 			}
@@ -19,7 +19,7 @@
 	<body>
 		<p><label>Input a Decimal Number : <input type="number" name="quantity" onchange="ToHex(this)" /></label></p>
 		<!-- Note that type="number" returns a value of "string datatype", not a "number datatype"! 
-		              so you need to change it (e.g. parseInt() , parseFloat(), new Number() etc.) to an authentic 
+		              so you need to change it (e.g. parseInt() , parseFloat(), Number() etc.) to an authentic 
 					  number for calculation, etc. -->
 		<p id="placeholder"></p>		
 	</body>
