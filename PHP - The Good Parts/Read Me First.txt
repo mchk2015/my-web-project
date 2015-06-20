@@ -1,0 +1,10 @@
+How to start PHP's built-in web server:
+
+Double-click the DOS Prompt here and type:
+
+> php -S localhost:8080
+   
+   (Press Ctrl-C to stop the web server)
+
+Double-click the "Local host at 8080" to open the index.php 
+
