@@ -1,0 +1,46 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    function updateTable(data){
+      var parks = $(data).find("park");
+      parks.each(function(){
+        var tr = $("<tr></tr>");
+        tr.append($("<td></td>").html(
+          $(this).children("name").text()));
+        tr.append($("<td></td>").html(
+          $(this).children("location").text()));
+        tr.append($("<td></td>").html(
+          $(this).children("established").text()));
+        var img = $('<img />').attr("src", "../images/"+
+          $(this).children("image").text());
+        tr.append($("<td></td>").append(img));
+        $("tbody").append(tr);
+      });
+    }
+    $(document).ready(function(){
+      $.get("parkdata.xml", updateTable);
+    });
+  </script>
+  <style>
+    img {width:80px;}
+    caption, th { background-color:blue; color:white;
+      font:bold 18px arial black; }
+    caption { border-radius: 10px 10px 0px 0px; 
+      font-size:22px; height:30px; }
+    td { border:1px dotted; padding:2px; }
+  </style>
+  </head>
+  <body>
+    <table>
+      <caption>Favorite U.S. National Parks</caption>
+      <thead><th>Park</th><th>Location</th>
+        <th>Established</th><th>&nbsp;</th></thead> 
+      <tbody></tbody>    
+    </table>
+    <p></p>
+  </body>
+</html>

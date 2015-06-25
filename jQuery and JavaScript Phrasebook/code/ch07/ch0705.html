@@ -1,0 +1,28 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("span").on("click", function(){
+        $(this).toggleClass("active");
+      });
+    });
+  </script>
+  <style>
+    span {
+      border:3px ridge white; border-radius:10px; 
+      padding:3px; color:black; background-color:#CCCCCC;
+      cursor:pointer; }
+    .active { 
+      background-color:blue; color:white; 
+      border-color:blue; font-weight:bold;}
+  </style>
+</head>
+  <body>
+    <span>Option 1</span>
+    <span>Option 2</span>
+  </body>
+</html>

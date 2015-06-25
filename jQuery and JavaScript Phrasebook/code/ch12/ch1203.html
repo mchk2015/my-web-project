@@ -1,0 +1,44 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" 
+    src="../js/jquery-ui-1.10.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" 
+    href="../js/css/jquery-ui-1.10.3.min.css">
+  <script>
+    function toggleImage(){
+      if ($("#handle").html() == '+'){
+        $("#photo").show(1000, function(){
+          $("#footer").toggle();});
+        $("#handle").html('-');
+      } else {
+        $("#footer").toggle();
+        $("#photo").hide(1000);
+        $("#handle").html('+');
+      }
+    }
+    $(document).ready(function(){
+      $("#handle").click(toggleImage);
+    });
+  </script>
+  <style>
+    div{ width:200px; text-align:center; }      
+    #bar, #handle, #footer{ font-weight:bold;
+      background-color:blue; color:white; }
+    #handle{ display:inline-block; cursor:pointer;
+      background-color:black; width:15px; float:left; }
+    #footer{ font-size:10px; background-color:black; }
+  </style>
+  </head>
+  <body>
+    <div>
+      <div id="bar"><span id="handle">-</span>
+        <span>Image</span></div>
+      <img id="photo" src="../images/img3.jpg" width="200px"/>
+      <div id="footer">Image Ready</div>
+    </div>
+  </body>
+</html>

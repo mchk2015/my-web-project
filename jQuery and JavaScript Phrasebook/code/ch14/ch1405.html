@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1">
+  <script src="../js/jquery-2.0.3.min.js"></script>
+  <script src="../js/initmobile.js"></script>
+  <script src="../js/jquery.mobile.js"></script>
+    <link rel="stylesheet" 
+      href="../js/css/jquery.mobile.css" />
+  <script>
+    $(document).ready(function() {
+      checkForMobile();
+    });
+  </script>
+  <style>
+    .photopopup img { width:220px; }
+    #menu-popup {width:200px; }
+  </style>
+</head>
+<body>
+  <div id="border"><div id="frame">
+  <div data-role="page" id="pageOne">
+    <div data-role="header"><h1>Popups</h1></div>
+    <div data-role="content">
+      <a data-role="button" href="#menu" data-rel="popup" 
+        id="menuLink">Popup Menu</a>
+      <div data-role="popup" id="menu" 
+        data-position-to="#menuLink">
+        <ul data-role="listview">
+          <li><a href="#photo1" data-rel="popup" 
+            id="imageLink">Image 1</a></li>
+          <li><a href="#photo2" data-rel="popup" 
+            id="imageLink">Image 2</a></li>
+        </ul></div>
+      <div data-role="popup" id="photo1" 
+        data-position-to="window" class="photopopup">
+        <a href="#" data-rel="back" data-role="button" 
+          data-icon="delete" data-iconpos="notext" 
+          class="ui-btn-right">Close</a>
+        <img src="../images/falls.jpg" /></div>
+      <div data-role="popup" id="photo2" 
+        data-position-to="window" class="photopopup">
+        <a href="#" data-rel="back" data-role="button" 
+          data-icon="delete" data-iconpos="notext" 
+          class="ui-btn-right">Close</a>
+        <img src="../images/peak.jpg" /></div>
+    </div>
+  </div>
+  </div></div>
+</body>
+</html>

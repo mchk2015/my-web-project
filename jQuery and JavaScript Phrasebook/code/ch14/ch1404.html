@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1">
+  <script src="../js/jquery-2.0.3.min.js"></script>
+  <script src="../js/initmobile.js"></script>
+  <script src="../js/jquery.mobile.js"></script>
+    <link rel="stylesheet" 
+      href="../js/css/jquery.mobile.css" />
+  <script>
+    $(document).ready(function() {
+      checkForMobile();
+    });
+  </script>
+</head>
+<body>
+  <div id="border"><div id="frame">
+  <div data-role="page" id="nested">
+    <div data-role="header"><h1>Nested List</h1></div>
+    <div data-role="content">
+    <ul data-role="listview">
+      <li>Hobbits<ul><li>Frodo</li><li>Sam</li>
+        <li>Bilbo</li></ul></li>
+      <li>Elves<ul><li>Legolas</li><li>Elrond</li>
+        <li>Galadriel</li></ul></li>
+      <li>Men<ul><li>Aragorn</li><li>Boromir</li>
+        <li>Theoden</li></ul></li>
+   </ul></div></div>
+  </div></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("input[type=text]").on("keypress", 
+        function(e){
+          var s = "You Pressed ";
+          if (e.ctrlKey){ s += "CTRL + "; };
+          if (e.altKey){ s += "SHIFT + "; };
+          if (e.shiftKey){ s += "SHIFT + "; };
+          s += String.fromCharCode(e.charCode);
+          $("#p1").html(s);
+          }); 
+      });
+  </script>
+</head>
+<body>
+  <p id="p1"></p>
+  <input type="text" />
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" 
+    src="../js/jquery-ui-1.10.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" 
+    href="../js/css/jquery-ui-1.10.3.min.css">
+  <script>
+    $(document).ready(function(){
+      $("img").on("click", function(){        
+        $("#top").fadeToggle(2000);
+      });
+    });
+  </script>
+  <style>
+    img { position:fixed; height:300px; 
+       border:3px ridge white;
+       box-shadow:5px 5px 5px #888888; 
+       margin:10px; background-color:black;}
+  </style>
+  </head>
+  <body>
+    <div>
+      <img id="bottom" src="../images/lake.jpg" />
+      <img id="top" src="../images/volcano.jpg" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    var tArr = ["Mens", "Womens", "Youth", "Childs"];
+    var sArr = ["XL", "M", "S", "XS"];
+    var kArr = ["pants", "shirt", "sweater", "belt"];
+    function randInt(max) { 
+      return Math.floor((Math.random()*max)+1); }
+    function buildTable(){
+      for(var x=1;x<10;x++){
+          var row =$("<tr></tr>");
+          row.append($("<td></td>").html(x));
+          row.append($("<td></td>").html(
+            tArr[randInt(3)]+" "+sArr[randInt(3)] + 
+              " " +kArr[randInt(3)]));
+          row.append($("<td></td>").html(randInt(20)));
+          row.append($("<td></td>").html(
+            ((Math.random()*80)+5).toFixed(2)));
+          $("tbody").append(row);}
+    }
+    $(document).ready(function (){
+      buildTable()      
+    });
+  </script>
+  <style> td {border:.5px dotted black; } </style>
+  </head>
+  <body>
+    <table>
+      <thead><tr>
+        <th class="numeric"><span>ID#</span></th>
+        <th ><span>Product</span></th>
+        <th class="numeric"><span>Quantity</span></th>
+        <th class="numeric"><span>Price</span></th>
+        <td class="spacer"></td>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>

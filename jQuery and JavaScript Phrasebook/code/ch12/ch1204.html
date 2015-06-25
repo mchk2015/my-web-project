@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" 
+    src="../js/jquery-ui-1.10.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" 
+    href="../js/css/jquery-ui-1.10.3.min.css">
+  <script>
+    $(document).ready(function(){
+      $("img").mouseover(function(){
+          $(this).animate(
+            {width:"200px", opacity:1}, 1000); });
+      $("img").mouseout(function(){
+          $(this).animate(
+            {width:"100px", opacity:.3}, 1000); });
+    });
+  </script>
+  <style>
+    div{ padding:0px; }
+    img{ opacity:.3; width:100px; float:left; }
+  </style>
+  </head>
+  <body>
+    <div id="photos">
+      <img src="../images/img1.jpg"/>
+      <img src="../images/img2.jpg"/>
+      <img src="../images/img3.jpg"/>
+      <img src="../images/img4.jpg"/>
+      <img src="../images/img5.jpg"/>
+    </div>
+  </body>
+</html>

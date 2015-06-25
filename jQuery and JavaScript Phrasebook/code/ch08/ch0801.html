@@ -1,0 +1,37 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("#down").hide();
+      $("#up").on("click", function(){
+        $("#up, #down").toggle();
+        $("#leftNav").hide(); });
+      $("#down").on("click", function(){
+        $("#up, #down").toggle();
+        $("#leftNav").show(); });
+    });
+  </script>
+  <style>
+    #banner { font:bold 36px/60px "cursive, serif"; 
+      color:white; background-color:blue; 
+      text-align:center; }
+    #bar { background-color:black; padding:3px;}
+    #leftNav {background-color:#cccccc; padding:5px;
+      width:100px; }
+    p { margin:0; margin-top:2px; border:1px solid; 
+        text-align:center; border-radius:10px; 
+        background-color:white; }
+  </style>
+</head>
+  <body>
+    <div id="banner">jQuery and JavaScript</div>
+    <div id="bar"><img id="down" src="../images/expand.png" />
+      <img id="up" src="../images/collapse.png" /></div>
+    <div id="leftNav"><p>Option 1</p>
+      <p>Option 2</p><p>Option 3</p></div>
+  </body>
+</html>

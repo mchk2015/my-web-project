@@ -1,0 +1,48 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    var imgArr = ["bison.jpg","peak.jpg","falls.jpg"];
+    var idx = 0;
+    $(document).ready(function (){
+      $("#up").on("click", function(){
+        var offset = $("#photo").offset();
+        offset.top -= 10;
+        $("#photo").offset(offset);
+      });
+      $("#down").on("click", function(){
+        var offset = $("#photo").offset();
+        offset.top += 10;
+        $("#photo").offset(offset);
+      });
+      $("#left").on("click", function(){
+        var offset = $("#photo").offset();
+        offset.left -= 10;
+        $("#photo").offset(offset);
+      });
+      $("#right").on("click", function(){
+        var offset = $("#photo").offset();
+        offset.left += 10;
+        $("#photo").offset(offset);
+      });
+    });
+  </script>
+  <style>
+    img{ vertical-align:middle;}
+    #photo { width:300px; border:5px ridge white; 
+       box-shadow: 5px 5px 5px #888888; position:fixed; }
+  </style>
+</head>
+  <body>
+    <div id="buttons">
+      <img id="up" src="../images/up.png" />
+      <img id="down" src="../images/down.png" />
+      <img id="left" src="../images/left.png" />
+      <img id="right" src="../images/right.png" />
+    </div>
+    <img id="photo" src="../images/arch.jpg" />
+  </body>
+</html>

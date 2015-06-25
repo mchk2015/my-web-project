@@ -1,0 +1,53 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" 
+    src="../js/jquery-ui-1.10.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" 
+    href="../js/css/jquery-ui-1.10.3.min.css">
+  <script>
+    $(document).ready(function(){
+      $("div div").hide();
+      $("span").mouseover(function(){
+        var i = $(this).index("span");
+        $("img").eq(i).animate({height:100}, 1000); });
+      $("span").mouseout(function(){
+        var i = $(this).index("span");
+        $("img").eq(i).animate({height:.1}, 1000); });
+      $("#container").mouseenter(function(e){
+          e.stopPropagation();
+          $("#images").stop(true).slideToggle(1000); });
+      $("#container").mouseleave(function(e){
+          e.stopPropagation();
+          $("#images").stop(true).slideToggle(1000); });
+    });
+  </script>
+  <style>
+    img{ display:inline-block; width:100px; height:.1px;
+      margin:0px; padding:0px; float:left;}
+    p, span { display:inline-block; width:400px;
+      background-color:black; color:white;
+      margin:0px; padding:0px; text-align:center;
+    }
+    span {width:100px; margin:-1px; float:left;
+      border:1px solid; background-color:blue; }
+    #container { width:410px; }
+  </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Images</p>
+      <div id="images">
+        <span>Image 1</span><span>Image 2</span>
+        <span>Image 3</span><span>Image 4</span><br>
+        <img src="../images/img1.jpg" />
+        <img src="../images/img3.jpg" />
+        <img src="../images/img5.jpg" />
+        <img src="../images/img7.jpg" />
+      </div>
+    </div>
+  </body>
+</html>

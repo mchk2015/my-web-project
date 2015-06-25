@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+  src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    function setCookie(name, value, days) {
+      var date = new Date();
+      date.setTime(date.getTime()+(days*24*60*60*1000));
+      var expires = "; expires="+date.toGMTString();
+      document.cookie = name + "=" + value + 
+                        expires + "; path=/";
+    }
+    function getCookie(name) {
+      var cArr = document.cookie.split(';');
+      for(var i=0;i < cArr.length;i++) {
+        var cookie = cArr[i].split("=",2);
+        cookie[0] = cookie[0].replace(/^\s+/,"");    
+        if (cookie[0] == name){ return cookie; }
+      }    }
+    setCookie("name", "Brad", 1);
+    setCookie("language", "English", 1);
+    document.write("<h3>Cookies</h3>");
+    var c1 = getCookie("name");
+    document.write(c1[0] + " is set to "+ c1[1] +"<br>");
+    var c2 = getCookie("language");
+    document.write(c2[0] + " is set to " + c2[1]);
+  </script>
+</head>
+<body>
+</body>
+</html>
+

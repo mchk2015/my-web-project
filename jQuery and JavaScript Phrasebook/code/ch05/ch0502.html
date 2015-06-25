@@ -1,0 +1,22 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      var liValues = $("li").map(function (idx){
+        return $(this).html();
+      }).get();  
+    });
+  </script>
+</head>
+  <body>
+    <ul>
+      <li>Aragorn</li>
+      <li>Legolas</li>
+      <li>Gimli</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#menu").hide();
+      $("#main").on("mousedown", function(e){
+        if(e.button == 2){ $("#menu").show(); } });
+      $("#main").on("mouseup", function(e){
+        if(e.button == 2){ $("#menu").hide(); } });
+      $('#main').on("contextmenu", function(e){ 
+        return false; });
+    });
+  </script>
+  <style>
+    #menu {border:3px groove blue; width:100px;}
+    p {text-align:center; margin:0px; border:1px solid; }
+  </style>
+</head>
+<body>
+  <div id="main"> Right-Click Me
+    <div id="menu">
+      <p>Item 1</p><p>Item 2</p><p>Item 3</p>
+    </div>
+  </div>
+</body>
+</html>
+

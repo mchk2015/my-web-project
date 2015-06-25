@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1">
+  <script src="../js/jquery-2.0.3.min.js"></script>
+  <script src="../js/initmobile.js"></script>
+  <script src="../js/jquery.mobile.js"></script>
+    <link rel="stylesheet" 
+      href="../js/css/jquery.mobile.css" />
+  <script>
+    $(document).ready(function() {
+      $(document).ready(function() {
+        checkForMobile();
+        $("p").on("click", function(){ 
+          $("#number").append($(this).html()); });
+        $("span").on("click", function(){
+          if ($(this).html() === "="){
+            $("#number").html(eval($("#number").html()));
+          } else {$("#number").html(""); };
+        });
+      });
+    });
+  </script>
+  <style>
+    p, span {  margin:2px; border-radius:15px; 
+      background-color:#888888; color:white;}
+    p, span { font:bold 30px/50px arial;  
+      text-align:center; border:3px ridge blue;}
+    #number { background-color:black; min-height:50px; 
+      text-align:right; padding-right:5px; }
+    span { background-color:#555555; display:block; }
+    #logic span { background-color:#B10000; }
+    #logic p { background-color:#0066AA;  }
+  </style>
+</head>
+<body>
+  <div id="border"><div id="frame">
+    <div data-role="header"><h1>Grid Page</h1></div>
+    <div data-role="content">
+      <div class="ui-grid-solo">
+        <div class="ui-block-a"><p id="number"></p></div>
+      </div>
+      <div class="ui-grid-b">
+        <div class="ui-block-a"><p>1</p></div>
+        <div class="ui-block-b"><p>2</p></div>
+        <div class="ui-block-c"><p>3</p></div>
+        <div class="ui-block-a"><p>4</p></div>
+        <div class="ui-block-b"><p>5</p></div>
+        <div class="ui-block-c"><p>6</p></div>
+        <div class="ui-block-a"><p>7</p></div>
+        <div class="ui-block-b"><p>8</p></div>
+        <div class="ui-block-c"><p>9</p></div>
+        <div class="ui-block-a"><span>C</span></div>
+        <div class="ui-block-b"><p>0</p></div>
+        <div class="ui-block-c"><span>CE</span></div>     
+      </div> 
+      <div class="ui-grid-d" id="logic">
+        <div class="ui-block-a"><p>+</p></div>
+        <div class="ui-block-b"><p>-</p></div>
+        <div class="ui-block-c"><p>*</p></div>
+        <div class="ui-block-d"><p>/</p></div>
+        <div class="ui-block-e"><span>=</span></div>
+      </div>
+    </div>
+  </div></div>
+</body>
+</html>
