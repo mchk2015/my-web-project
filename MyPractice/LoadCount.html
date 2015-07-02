@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>Load Count</title>
+</head>
+<body>
+	<p>You have visited this page <span id="count"></span> time(s).</p>
+	<script type="text/javascript">
+		if (!localStorage.loadCount) {
+			localStorage.loadCount = 1;
+		} else {
+			localStorage.loadCount = parseInt(localStorage.loadCount) + 1;
+			document.getElementById("count").innerHTML = localStorage.loadCount;
+		}
+	</script>
+</body>
+</html>
