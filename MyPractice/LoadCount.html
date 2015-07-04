@@ -6,10 +6,11 @@
 </head>
 <body>
 	<p>You have visited this page <span id="count"></span> time(s).</p>
-	<script type="text/javascript">
-		if (!localStorage.loadCount) {
+	<script type="text/javascript">    
+		if (!localStorage.loadCount) {  // i.e. If never visited(so that no loadCount object is found), set count to 1        
 			localStorage.loadCount = 1;
-		} else {
+			document.getElementById("count").innerHTML = localStorage.loadCount;
+		} else {                        // i.e. If visited before, increase the count by 1
 			localStorage.loadCount = parseInt(localStorage.loadCount) + 1;
 			document.getElementById("count").innerHTML = localStorage.loadCount;
 		}
