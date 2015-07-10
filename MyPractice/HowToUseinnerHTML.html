@@ -5,15 +5,17 @@
 		<title>HTML5 Language Declaration</title>
 	</head>
 	<script type="text/javascript">
-			function add(){
-			document.getElementById("content").innerHTML += "<p>I like the above content!</p>";
+			function addComment(){
+			document.getElementById("placeToHold").innerHTML = "<p>I like the above content!</p>";
 			}
 	</script>
 	<body>
-		<p><input type="button" value="Click to like the content" name="btn1" onclick="add()" /></p>
+		<p><input type="button" value="Click to like the content" name="btn1" onclick="addComment()" /></p>
 		<p id="content">Declaring a document’s primary language isn’t a requirement for HTML5. <br />
 	       It is, however, a good practice for both usability and accessibility. <br />
 	       Therefore the title can still be shown in Chinese even I declared "en" as the primary language of this file!
-		</p>	   
+		</p>
+		<br />
+        <div id="placeToHold"></div>		
 	</body>
 </html>
