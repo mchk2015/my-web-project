@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Benefit of Not Using Form Element</title>		
-	</head>
-	<script type="text/javascript">
-				function myAge(a) {
-					var age = parseFloat(a.value);
-					if (age >= 100) {
-						document.getElementById("placeholder").innerHTML = "Wow you're a centurian!";
-					} else if (age >=18) {
-						document.getElementById("placeholder").innerHTML = "You're an adult.";     
-					} else {
-						document.getElementById("placeholder").innerHTML = "You are a child.";
-					}
-				};
-	</script>
-	<body>	
-		<div><span>How old are you? <input type="number" id="howOld" name="num1" /></span>
-		     <span><input type="button" value="Submit" name="btn1" onclick="myAge(getElementById('howOld'))" /></span>
-			 <!-- If using <form> tags, you must add "return false" to any input action(e.g.onclick) to suppress the action
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Benefit of Not Using Form Element</title>
+  <script type="text/javascript">
+  function myAge(a) {
+    var age = parseFloat(a.value);
+    if (age >= 100) {
+      document.getElementById("placeholder").innerHTML = "Wow you're a centurian!";
+    } else if (age >= 18) {
+      document.getElementById("placeholder").innerHTML = "You're an adult.";
+    } else {
+      document.getElementById("placeholder").innerHTML = "You are a child.";
+    }
+  };
+  </script>
+</head>
+
+<body>
+  <div><span>How old are you? <input type="number" id="howOld" name="num1" /></span>
+    <span><input type="button" value="Submit" name="btn1" onclick="myAge(getElementById('howOld'))" /></span>
+    <!-- If using <form> tags, you must add "return false" to any input action(e.g.onclick) to suppress the action
 			      signal to send to <form> which actually contains no action attribute to take. Otherwise, the web page will 
 			      get refreshed and make the output disappear almost immediately! 
 				  However, if you don't use <form>, there is no need to add "return false". -->
-		</div>
-		<p id="placeholder"></p>
-	</body>	
+  </div>
+  <p id="placeholder"></p>
+</body>
+
 </html>

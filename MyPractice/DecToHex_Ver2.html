@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Covert a Decimal to a Hexadecimal (input type = number)</title>
-		<style rel="stylesheet" type="text/css">
-		input[type=number] {
-			-moz-appearance: textfield; <!-- suppress the number spinner -->
-		}
-		</style>
-		<script type="text/javascript">
-			function ToHex(decInNumber){
-			var inDec = Number(decInNumber.value); // avoid using new Number(); use Number(), parseInt() or parseFloat() instead
-			var inHex = inDec.toString(16);	
-			document.getElementById("placeholder").innerHTML = "The Decimal " + inDec +  " in Hexadecimal is " + inHex.toUpperCase();	
-			}
- 		</script>			
-	</head>	
-	<body>
-		<p><label>Input a Decimal Number : <input type="number" name="quantity" onchange="ToHex(this)" /></label></p>
-		<!-- Note that type="number" returns a value of "string datatype", not a "number datatype"! 
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Covert a Decimal to a Hexadecimal (input type = number)</title>
+  <style rel="stylesheet" type="text/css">
+  input[type=number] {
+    -moz-appearance: textfield;
+    <!-- suppress the number spinner -->
+  }
+  </style>
+  <script type="text/javascript">
+  function ToHex(decInNumber) {
+    var inDec = Number(decInNumber.value); // avoid using new Number(); use Number(), parseInt() or parseFloat() instead
+    var inHex = inDec.toString(16);
+    document.getElementById("placeholder").innerHTML = "The Decimal " + inDec + " in Hexadecimal is " + inHex.toUpperCase();
+  }
+  </script>
+</head>
+
+<body>
+  <p>
+    <label>Input a Decimal Number :
+      <input type="number" name="quantity" onchange="ToHex(this)" />
+    </label>
+  </p>
+  <!-- Note that type="number" returns a value of "string datatype", not a "number datatype"! 
 		              so you need to change it (e.g. parseInt() , parseFloat(), Number() etc.) to an authentic 
 					  number for calculation, etc. -->
-		<p id="placeholder"></p>		
-	</body>
+  <p id="placeholder"></p>
+</body>
+
 </html>

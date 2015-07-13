@@ -3,7 +3,6 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
 /* Toggle Styles */
 
 #wrapper {
@@ -47,7 +46,6 @@
     position: absolute;
     margin-right: -250px;
 }
-
 /* Image on Top of Sidebar Style */
 
 .image-responsive {
@@ -58,7 +56,6 @@
     padding: 0;
     list-style: none;
 }
-
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -84,7 +81,7 @@
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -95,9 +92,9 @@
 .sidebar-nav > .sidebar-brand {
     height: 65px;
     font-size: 18px;
-	font-weight: bold;
+    font-weight: bold;
     line-height: 60px;
-	color: #fff;
+    color: #fff;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -113,25 +110,20 @@
     #wrapper {
         padding-left: 250px;
     }
-
     #wrapper.toggled {
         padding-left: 0;
     }
-
     #sidebar-wrapper {
         width: 250px;
     }
-
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
-
     #page-content-wrapper {
         padding: 20px;
         position: relative;
-		margin-top: -25px;
+        margin-top: -25px;
     }
-
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;

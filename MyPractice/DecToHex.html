@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Covert a Decimal to a Hexadecimal (input type = text)</title>
-		<script type="text/javascript">
-			function ToHex(decInText){
-			var inDec = parseFloat(decInText.value); // avoid using new Number(), use parseInt or parseFloat instead
-			var inHex = inDec.toString(16);		
-			document.getElementById("placeholder").innerHTML = "The Decimal " + inDec +  " in Hexadecimal is " + inHex.toUpperCase();
-			}
- 		</script>			
-	</head>	
-	<body>
-		<p><label>Input a Decimal Number : <input type="text" id="dectext" name="txt1" /></label><p>
-		<p><input type="submit" value="Submit" onclick="ToHex(document.getElementById('dectext'))" /></p>
-		<p id="placeholder"></p>
-	</body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Covert a Decimal to a Hexadecimal (input type = text)</title>
+  <script type="text/javascript">
+  function ToHex(decInText) {
+    var inDec = parseFloat(decInText.value); // avoid using new Number(), use parseInt or parseFloat instead
+    var inHex = inDec.toString(16);
+    document.getElementById("placeholder").innerHTML = "The Decimal " + inDec + " in Hexadecimal is " + inHex.toUpperCase();
+  }
+  </script>
+</head>
+
+<body>
+  <p>
+    <label>Input a Decimal Number :
+      <input type="text" id="dectext" name="txt1" />
+    </label>
+    <p>
+      <p>
+        <input type="submit" value="Submit" onclick="ToHex(document.getElementById('dectext'))" />
+      </p>
+      <p id="placeholder"></p>
+</body>
+
 </html>

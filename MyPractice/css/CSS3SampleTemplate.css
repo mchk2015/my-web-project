@@ -1,164 +1,162 @@
 body {
-	background: #eee;
-	font: normal normal 12pt Arial, sans-serif;
-	width: 90%;
-	margin-left: 5%;
-	line-height: 150%;
-	color: #666;
+    background: #eee;
+    font: normal normal 12pt Arial, sans-serif;
+    width: 90%;
+    margin-left: 5%;
+    line-height: 150%;
+    color: #666;
 }
 
 body > header {
-	text-align: left;
+    text-align: left;
 }
+
 body > footer {
     text-align: right;
 }
-
-
-
-
 /* About the navigation menu and drop-down sub-menu */
+
 nav ul {
-	display: inline;
-	text-align: left;
-	margin: 0;
-	padding: 15px 4px 17px 0;
-	list-style: none;
-	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    display: inline;
+    text-align: left;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
+
 nav ul li {
-	font: bold 12px/18px sans-serif;
-	display: inline-block;
-	margin-right: -4px;
-	position: relative;
-	padding: 15px 20px;
-	background: #fff;
-	cursor: pointer;
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
+    font: bold 12px/18px sans-serif;
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 15px 20px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
 }
+
 nav ul li:hover {
-	background: #555;
-	color: #fff;
+    background: #555;
+    color: #fff;
 }
 
 nav ul li ul {
-	padding: 0;
-	position: absolute;
-	top: 48px;
-	left: 0;
-	width: 150px;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transiton: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-ms-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-	-transition: opacity 0.2s;
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 150px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
 }
+
 nav ul li:hover ul {
-	display: block;
-	opacity: 1;
-	visibility: visible;
-}
-nav ul li a:link,a:visited {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1.2em;
-	color: #aaa;
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
-nav ul li ul li { 
-	background: #555; 
-	display: block; 
-	color: #fff;
-	text-shadow: 0 -1px 0 #000;
-}
-nav ul li ul li:hover { 
-	background: #666; 
+nav ul li a:link,
+a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #aaa;
 }
 
+nav ul li ul li {
+    background: #555;
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+}
 
+nav ul li ul li:hover {
+    background: #666;
+}
 
-				   
 aside {
-	float: right;
-	margin: 0 0 0 2%;
-	padding: 0 20px;
-	background-color: silver;
-	color: black;
-	font-size: 0.8em;
-	line-height: 150%;
-	min-height: 700px;
+    float: right;
+    margin: 0 0 0 2%;
+    padding: 0 20px;
+    background-color: silver;
+    color: black;
+    font-size: 0.8em;
+    line-height: 150%;
+    min-height: 700px;
 }
+
 aside > h2 {
-	background-color: silver;
-	color: black;
-	margin: 0 0 10px 0;
-	padding: 0;
-}
-aside ul  li a:link,a:visited {
-	text-decoration: none;
+    background-color: silver;
+    color: black;
+    margin: 0 0 10px 0;
+    padding: 0;
 }
 
-
-
+aside ul li a:link,
+a:visited {
+    text-decoration: none;
+}
 
 section {
-	width: 80%;
-	text-align: justify;
+    width: 80%;
+    text-align: justify;
 }
+
 section > h2 {
-	text-align: center;
+    text-align: center;
 }
-
-
-
 
 article {
-	text-align: justify;
+    text-align: justify;
 }
+
 article > header {
-  	text-align: left;
+    text-align: left;
 }
+
 article > footer {
-	text-align: left;
+    text-align: left;
 }
-
-
-
 
 dt {
-	font: normal bold 13pt Arial, sans-serif;
+    font: normal bold 13pt Arial, sans-serif;
 }
+
 h1 {
-	background-color: darkgray;
-	color: white;
-	margin: 0 auto;
-	text-transform: uppercase;
-	font: normal bold 2em Arial, sans-serif;	
+    background-color: darkgray;
+    color: white;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font: normal bold 2em Arial, sans-serif;
 }
+
 h2 {
-	background-color: gray;
-	color: white;
-	margin: 0 auto;
-	text-transform: capitalize;
-	font: normal bold 1.5em Arial, sans-serif;
+    background-color: gray;
+    color: white;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font: normal bold 1.5em Arial, sans-serif;
 }
+
 body > footer > span {
-	color: gray;
-	margin: 0 auto;
-	font: normal bold 0.7em Arial, sans-serif;
+    color: gray;
+    margin: 0 auto;
+    font: normal bold 0.7em Arial, sans-serif;
 }
-
-
-
