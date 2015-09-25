@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>A Fixed Layout Sample</title>
+    <style rel="stylesheet" type="text/css">
+    * {
+        margin: 0;
+        border-width: 0;
+        padding: 0;
+    }
+    
+    body {
+        text-align: center;
+    }
+    
+    .container {
+        width: 1024px;
+        height: 615px;
+        background-color: rgb(34, 156, 203);
+        position: relative;
+    }
+    
+    .fixed-item1 {
+        width: 295px;
+        height: 145px;
+        background-color: rgb(255, 0, 0);
+        position: absolute;
+        top: 125px;
+        left: 180px;
+        border: 6px black dashed;
+        border-radius: 15px 15px 15px 15px;
+        padding: 8px;
+        text-align: justify;
+    }
+    
+    .fixed-item2 {
+        width: 295px;
+        height: 145px;
+        background-color: rgb(255, 165, 0);
+        position: absolute;
+        top: 125px;
+        right: 180px;
+        border: 6px black dashed;
+        border-radius: 15px 15px 15px 15px;
+        padding: 8px;
+        text-align: justify;
+    }
+    
+    .fixed-item3 {
+        width: 295px;
+        height: 145px;
+        background-color: rgb(255, 255, 0);
+        position: absolute;
+        bottom: 125px;
+        left: 180px;
+        border: 6px black dashed;
+        border-radius: 15px 15px 15px 15px;
+        padding: 8px;
+        text-align: justify;
+    }
+    
+    .fixed-item4 {
+        width: 295px;
+        height: 145px;
+        background-color: rgb(51, 153, 102);
+        position: absolute;
+        bottom: 125px;
+        right: 180px;
+        border: 6px black dashed;
+        border-radius: 15px 15px 15px 15px;
+        padding: 8px;
+        text-align: justify;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Title</h1>
+        <div class="fixed-item1">This paragraph has an class name of <b>"box1"</b> and has a red background.
+        </div>
+        <div class="fixed-item2">This paragraph has an class name of <b>"box2"</b> and has a orange background.
+        </div>
+        <div class="fixed-item3">This paragraph has an class name of <b>"box3"</b> and has a yellow background.
+        </div>
+        <div class="fixed-item4">This paragraph has an class name of <b>"box4"</b> and has a green background.
+        </div>
+    </div>
+</body>
+
+</html>
