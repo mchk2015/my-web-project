@@ -4,19 +4,22 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>W3C DOM Tests</title>
+  <title>W3C DOM Misc Tests</title>
   <script type="text/javascript">
   function myFunction(){
    
 	var mytarget = document.getElementById("target");
     mytarget.style.color = "blue";
     
-    var myparagraph = document.getElementsByTagName("p");
-    document.getElementById("paralength").innerHTML = myparagraph.length;
+    var paragraphs = document.getElementsByClassName("paraStyle");
+    document.getElementById("paralength").innerHTML = paragraphs.length;
     
-    myparagraph[1].style.color = "black";
+    paragraphs[1].style.color = "black";
     
-    document.getElementById("paracontent").innerHTML = myparagraph[2].textContent
+    var hdr = document.getElementsByTagName("section")[0].getElementsByTagName("h2")[0];
+    document.getElementById("hdrcontent").innerHTML = hdr.textContent;
+    
+    document.getElementById("paracontent").innerHTML = paragraphs[2].textContent;
     
     var item = document.getElementsByTagName("p");
     var clone = item[3].cloneNode(true);
@@ -25,8 +28,12 @@
     var nodetext = document.createTextNode("This is a new line of text.");
     var node = document.createElement("div");
     node.appendChild(nodetext);
-    document.getElementById("newtext").appendChild(node);
+    document.getElementById("newtext").appendChild(node);    
+    
   }  
+  
+  document.addEventListener("DOMContentLoaded", myFunction, false);
+  
   </script>
   
 </head>
@@ -43,7 +50,7 @@
      text-align: center;
      word-spacing: 5px;
      color: white;">
-        <b>DOM</b> <b>T</b>ests
+        <b>DOM</b> <b>M</b>isc <b>T</b>ests
   </header>  
 
   <article style=
@@ -66,14 +73,14 @@
         Wise busy past both park when an ye no
         </h2>
 
-        <p style="padding: 0 2em 0 1em;">
+        <p class="paraStyle" style="padding: 0 2em 0 1em;">
         Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do
         although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold 
         easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh 
         fine. Chapter ability shyness article welcome be do on service.
         </p>
 
-        <p style="padding: 1em 2em 0 2em;">
+        <p class="paraStyle" style="padding: 1em 2em 0 2em;">
         Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater
         joy adapted too shy. Now properly surprise expenses interest nor replying she she. Bore tall nay 
         many many time yet less. Doubtful for answered one fat indulged margaret sir shutters together. 
@@ -82,14 +89,14 @@
         offering him elegance son improved informed.
         </p>
         
-        <p style="padding: 1em 2em 3em 0;">
+        <p class="paraStyle" style="padding: 1em 2em 3em 0;">
         You disposal strongly quitting his endeavor two settling him. Manners ham him hearted hundred 
         expense. Get open game him what hour more part. Adapted as smiling of females oh me journey 
         exposed concern. Met come add cold calm rose mile what. Tiled manor court at built by place 
         fanny. Discretion at be an so decisively especially. Exeter itself object matter if on mr in.
         </p>
         
-        <p style="padding: 1em 2em 1em 4em;">
+        <p class="paraStyle" style="padding: 1em 2em 1em 4em;">
         Unwilling sportsmen he in questions september therefore described so. Attacks may set few 
         believe moments was. Reasonably how possession shy way introduced age inquietude. Missed he 
         engage no exeter of. Still tried means we aware order among on. Eldest father can design tastes
@@ -101,15 +108,17 @@
       
   </article>
   
-<input id="clickMe" type="button" value="Click Me" onclick="myFunction();" /> <br />
+<!-- <input id="clickMe" type="button" value="Click Me" onclick="myFunction();" /> <br /> -->
 1. To change to blue color of : <span id="target">Hello World!</span> <br />
 2. To show the number of paragraphs in this webpage: <span id="paralength"></span> <br />
 3. To change the second paragraph to black color. <br />
-4. To show the content of the third paragraph as follows: 
+4. To show the header content only: </br>
+   <div id="hdrcontent"></div>
+5. To show the content of the third paragraph as follows: 
    <div id="paracontent"></div> 
-5. To clone node (i.e. content + style) of the last paragraph as follows: 
+6. To clone node (i.e. content + style) of the last paragraph as follows: 
    <div id="cloneitem"></div>
-6. To create a new line of text below: 
+7. To create a new line of text below: 
    <div id="newtext"></div>
  
 </body>
