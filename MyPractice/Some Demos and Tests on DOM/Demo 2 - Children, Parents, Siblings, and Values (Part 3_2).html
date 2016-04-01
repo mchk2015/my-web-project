@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Date Example</title>
+    <style type="text/css" rel="stylesheet">
+        .error {
+            color: #C00; 
+            font-weight: bold
+        }
+    </style>
+    <script type="text/javascript" src="CPSV-Part3_2_checkdate.js"></script>
+</head>
+
+<body>
+    <h1>Events Search</h1>
+    <form action="eventssearch.php" method="post" onsubmit="return checkDate();">
+    <p>
+        <label for="date">Date in the format DD/MM/YYYY:</label><br />
+        <input type="text" id="date" name="date" />
+        <input type="submit" value="Check " /><br />
+        (example 26/04/1975) <span class="error"> </span>  <!-- Must leave a space inside the span tags here -->
+    </p>
+    </form>    
+</body>
+
+</html>
