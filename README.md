@@ -1,5 +1,10 @@
 # my-web-project
-# Markdown Cheat Sheet
+
+## Markdown Cheat Sheet ##
+
+This is a paragraph.  
+This is also a paragraph.
+
 A First Level Header
 ====================
 
@@ -65,11 +70,11 @@ I start my morning with a cup of coffee and
 
 ---
 
-![alt text](MyPractice/docs-assets/images/rwd.png "A Logo")
+![alt text](MyPractice/docs-assets/images/rwd.png "Responsive Web Design")
 
 ![alt text][id]
 
-[id]: MyPractice/docs-assets/images/rwd.png "A Logo"
+[id]: MyPractice/docs-assets/images/rwd.png "Responsive Web Design"
 
 ---
 
@@ -92,9 +97,34 @@ you've got to put paragraph tags in your blockquotes:
 
 ---
 
-Name | Lunch order | Spicy      | Owes
-------- | ---------------- | ---------- | ---------:
-Joan  | saag paneer | medium | $11
-Sally  | vindaloo        | mild       | $14
-Erin   | lamb madras | HOT      | $5
+### Table ###
+
+| Center | Left | Right  |
+| :------: | :------ | ------: |
+|  Cell  |  Cell  |   $10  |
+|  Cell  |  Cell  |   $20  |
+
+
+### Diagram ###
+
+~~~mermaid
+graph TD;
+	A-->B;
+	A-->C;
+	B-->D;
+	C-->D;
+~~~
+
+### Math ###
+
+The displayed delimiters are `$$` and `$$` while the inline delimiters are `\\(` and `\\)`. Displayed delimiters need to be on a paragraph all by themselves while inline formulas can be placed within paragraphs. For example ...
+
+A formula with displayed delimiters:
+
+$$y=a\sum_{k=1}^{\infty}\frac{1}{k^{2}}$$
+
+A formula with inline delimiters:
+
+This formula here \\(y=a\sum_{k=1}^{\infty}\frac{1}{k^{2}}\\) is a test.
+
 
