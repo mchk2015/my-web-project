@@ -1,5 +1,7 @@
 # my-web-project
 
+In case you want to view a GitHub file like what a browser does instead of as a text file, go to [RawGit](http://rawgit.com).
+
 ## Markdown Cheat Sheet ##
 
 This is a paragraph.  
@@ -67,9 +69,6 @@ I start my morning with a cup of coffee and
 [The New York Times][NY Times].
 
 [ny times]: http://www.nytimes.com/
-
-
-This is an [internal link](./FCC/practice.html).
 
 ---
 
