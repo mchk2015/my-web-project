@@ -68,6 +68,9 @@ I start my morning with a cup of coffee and
 
 [ny times]: http://www.nytimes.com/
 
+
+This is an [internal link](./FCC/practice.html).
+
 ---
 
 ![alt text](MyPractice/docs-assets/images/rwd.png "Responsive Web Design")
