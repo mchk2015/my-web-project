@@ -1,0 +1,27 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("ul").on("click", function(){
+        $(this).css({"border":"3px groove black"});
+      });
+      $("li").on("click", function(){
+        $(this).css({"border-style":"dotted",
+                     "border-size":1,
+                     "border-color":"blue"});
+      });
+    });
+  </script>
+</head>
+  <body>
+    <ul>
+      <li>George Washington</li>
+      <li>John Adams</li>
+      <li>Thomas Jefferson</li>
+    </ul>
+  </body>
+</html>

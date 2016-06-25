@@ -1,0 +1,31 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" 
+    src="../js/jquery-ui-1.10.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" 
+    href="../js/css/jquery-ui-1.10.3.min.css">
+  <script>
+  function randInt(max, min) { 
+      return Math.floor((Math.random()*max)+min); }
+    $(document).ready(function(){      
+      $("span").mouseover(function(){
+          var newTop = randInt(500,10);
+          var newLeft = randInt(700,10);
+          $(this).animate(
+            {top:newTop, left:newLeft}, 200); });
+    });
+  </script>
+  <style>
+    span {border:3px ridge blue; padding:5px; position:fixed; 
+      border-radius: 30px 10px; background-color:blue; color:white;
+      font:bold italic 22px cursive, serif; }
+  </style>
+  </head>
+  <body>
+    <span>Click Here</span>
+  </body>
+</html>

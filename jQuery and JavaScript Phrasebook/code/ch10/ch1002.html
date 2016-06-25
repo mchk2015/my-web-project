@@ -1,0 +1,24 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      for(var i=0; i<10; i++){
+        $("ul").append($("<li></li>").html("Item "+ i));
+      }
+      $("#odd").on("click", function(){
+        $("li:odd").remove(); });
+      $("#even").on("click", function(){
+        $("li:even").remove(); });
+    });
+  </script>
+</head>
+  <body>
+    <button id="odd">Remove Odd</button>
+    <button id="even">Remove Even</button>
+    <ul></ul>
+  </body>
+</html>

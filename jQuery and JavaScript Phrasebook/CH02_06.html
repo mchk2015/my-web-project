@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Applying Logic, Math Operations and Working with Dates</title>
+		<script type="text/javascript">
+			document.write("<p><h1>Applying Logic</h1></p>");
+				<!-- Determining if an Object is Equal to or Less than Another -->
+					var x = 5;
+					var y = "5";
+					var resultA = x==y; // is x equal to y regardless of data type ? true
+					var resultB = x===y; // is x equal to y when data type is taken into account ? false
+					document.write(resultA); 
+					document.write(", ");
+					document.write(resultB);
+					document.write("<br />");
+				<!-- Adding Conditional Blocks of Code -->
+					var age = 33;
+					if (age >= 100) {
+						document.write("Wow you're a centurian!");
+					} else if (age >=18) {
+						document.write("You're an adult.");     // returns this as age 33 >= 18
+					} else {
+						document.write("You are a child.");
+					}
+					document.write("<br />");
+				<!-- Using a While Loop -->
+					var weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+					do { 
+						var day = weekdays.pop();  // this cut out the last item of the array weekdays to day
+						document.write(day + ", ");
+					} while (day != "Wed");   // returns Fri, then, Thu, and finally Wed
+					document.write("<br />");
+				<!-- Iterating Through Arrays -->				
+					var weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+					for (var x=0; x < weekdays.length; x++){ // length = 5
+						document.write(weekdays[x] + "|"); //returns Mon|Tue|Wed|Thu|Fri
+					}
+					document.write("<br />");
+				<!-- Iterating Through Object Properties -->
+					var obj = {FN:"Michael", LN:"Chan", Title:"Manager"}; // array of object is embraced in curly, not square brackets
+					for (var key in obj) {   // an item in an array of objects obj is key:obj[key]
+						document.write(key + "=" + obj[key] + " & "); // returns FN=Michael & LN=Chan & Title=Manager &
+					}
+					document.write("<br />");
+			document.write("<hr />");
+			
+			document.write("<p><h1>Math Operations</h1></p>");
+				<!-- Math Object Properties-->
+					document.write(Math.PI + ", " + Math.E); // Pi and Euler's number(aka Exponential e)
+					document.write("<br />");
+					document.write(Math.LN2 + ", " + Math.LN10); // Natural log of 2 nd 10
+					document.write("<br />");
+					document.write(Math.LOG2E + ", " + Math.LOG10E); // Base-2 and Base-10 log of Exponential e
+					document.write("<br />");
+					document.write(Math.SQRT1_2 + ", " + Math.SQRT2); // square root of 1/2 and 2
+					document.write("<br />------<br />");  // if rounding with 3 decimals, use the function "toFixed(3)"
+				<!-- Generating Random Numbers -->
+					document.write(Math.random()); // returns a random number between 0 and 1
+					document.write("<br />");
+					document.write(Math.floor(Math.random() * 10) + 1); // returns a random number between 1 and 10
+					document.write("<br />");
+					document.write(Math.floor(Math.random() * 20) - 10); // returns a random number between -10 and 10
+					document.write("<br />------<br />");
+				<!-- Rounding, Ceiling and, Flooring Numbers -->
+					var x = 3.4;
+					var y = 3.5;
+					document.write(Math.round(x) + ", " + Math.round(y)); // returns 3, 4
+					document.write("<br />");
+					document.write(Math.ceil(x) + ", " + Math.ceil(y)); // returns 4, 4
+					document.write("<br />");
+					document.write(Math.floor(x) + ", " + Math.floor(y)); // returns 3, 3
+					document.write("<br />------<br />");	
+				<!-- Getting the Minimum Number in a Set -->
+					document.write(Math.min(8,"0x5",12,"44",8,23,77)); //returns 5
+					document.write("<br />");
+					var arr1 = [4,8,12,3,7,11];
+					document.write(Math.min.apply( Math, arr1 )); //returns 3
+					document.write("<br />");
+					var arr2 = ["0x5",8,12,"4",8,23,77,"0x1F"];
+					document.write(Math.min.apply( Math, arr2 )); //returns 4
+					document.write("<br />------<br />");
+				<!-- Getting the Maximum Number in a Set-->
+					document.write(Math.max(8,"0x5",12,"44",8,23,77)); //returns 77
+					document.write("<br />");
+					var arr1 = [4,8,12,3,7,11];
+					document.write(Math.max.apply( Math, arr1 )); //returns 12
+					document.write("<br />");
+					var arr2 = ["0x5",8,12,"4",308,23,77,"0xFF"];
+					document.write(Math.max.apply( Math, arr2 )); //returns 308
+					document.write("<br />------<br />");
+				<!-- Calculating Absolute Value -->
+					document.write(Math.abs(-5)); //returns 5
+					document.write("<br />");
+					document.write(Math.abs(5)); //returns 5
+					document.write("<br />");
+					document.write(Math.abs("-15")); //returns 15
+					document.write("<br />");
+					document.write(Math.abs("0xFF")); //returns 255
+					document.write("<br />------<br />");
+				<!-- Applying Trigonometric Functions -->
+					document.write(Math.log(2)); //returns approx 0.693, exactly equal to Math.LN2 above
+					document.write("<br />");
+					document.write(Math.sin(0)); //returns 0
+					document.write("<br />");
+					document.write(Math.cos(0)); //returns 1
+					document.write("<br />");
+					document.write(Math.tan(1)); //returns approx 1.557
+					document.write("<br />------<br />");
+				<!-- Match Object Trigonometric Methods -->
+					document.write(Math.acos(0.5)); // returns the arccosine of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.asin(0.5)); // returns the arcsine of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.atan(0.5)); // returns the arctangent of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.atan2(0.5,0.5)); // returns the arctangent of 0.5 in radians
+					document.write("<br />");
+					document.write(Math.cos(0.5)); // returns the cosine of 0.5 (0.5 is in radians)
+					document.write("<br />");
+					document.write(Math.sin(0.5)); // returns the sine of 0.5 (0.5 is in radians)
+					document.write("<br />");
+					document.write(Math.tan(0.5)); // returns the tangent of an angle
+					document.write("<br />");
+					document.write(Math.log(0.5)); // returns the natural logarithm (base E) of 0.5
+					document.write("<br />------<br />");
+				<!-- Applying Exponential, Power, and Squart Root Functions -->
+					document.write(Math.exp(4)); //returns approx 54.59815, i.e. Exponential e^4
+					document.write("<br />");	
+					document.write(Math.pow(2,16)); //returns 65536 , i.e. 2^16
+					document.write("<br />");	
+					document.write(Math.sqrt(25)); //returns 5, i.e. squart root of 25
+					document.write("<br />");				
+			document.write("<hr />");
+			
+			document.write("<p><h1>Working with Dates</h1></p>");
+				<!-- Creating a Date Object -->
+					var d1 = new Date(); 		// new date()
+					document.write(d1); 		// returns current date and time
+					document.write("<br />");
+					var d2 = new Date(1434400177000); // new Date(in ms since 1-1-1970 12:00:00)
+					document.write(d2);   			  //returns Tue Jun 16 2015 04:29:37 GMT+0800
+					document.write("<br />");
+					var d3 = new Date("June 16 2015 13:55:12 GMT+0800"); // new Date(dateString)
+					document.write(d3);									 //returns Tue Jun 16 2015 13:55:12 GMT+0800
+					document.write("<br />");
+					var d4 = new Date("1/30/2020"); // new Date(dateString)
+					document.write(d4); 			//returns Sat Jan 30 2020 00:00:00 GMT+0800
+					document.write("<br />");
+					var d5 = new Date("12/25/2015 12:12:12"); // new Date(dateString)
+					document.write(d5);						  //returns Wed Dec 25 2015 12:12:12 GMT+0800
+					document.write("<br />");
+					var d6 = new Date(2016, 11, 10, 16, 5, 10, 3); // new Date(year, month, day, hrs, mins, secs, ms);
+					document.write(d6);							   //returns Sat Dec 10 2016 16:05:10 GMT+0800
+					document.write("<br />------<br />");
+				<!-- Getting the Current Date and Time -->				
+					var today = new Date();					// new date()
+					document.write(today);					// returns current date and time
+					document.write("<br />------<br />");
+				<!-- Creating a Date String -->
+					var d = new Date();						// new date() object with current date 
+					document.write(d.toString());			// in full date string e.g. Tue Jun 16 2015 04:29:37 GMT+0800
+					document.write("<br />");
+					document.write(d.toDateString()); 		// in abbreviated date string e.g. Tue Jun 16 2015
+					document.write("<br />");
+					document.write(d.toLocaleDateString());	// in localized date string e.g. 6/16/2015
+					document.write("<br />");
+					document.write(d.toISOString());		// in ISO standardized date string e.g. 2015-06-15T20:29:37.846Z
+					document.write("<br />");
+					document.write(d.toUTCString());		// in UTC time date string e.g. Mon, 15 Jun 2015 20:29:37 GMT					
+					document.write("<br />------<br />");
+				<!-- Creating a Time String -->
+					var d = new Date();						// new date() object with current date 
+					document.write(d.toTimeString());		// in full time string e.g. 04:29:37 GMT+0800
+					document.write("<br />");
+					document.write(d.toLocaleTimeString());	// in localized time string e.g. 4:29:37 AM
+					document.write("<br />------<br />");	
+				<!-- Getting a Time Delta -->
+					var atime = new Date("2014-01-04T08:45:22.356Z");
+					var btime = new Date("2014-01-04T12:12:57.758Z");
+					var delta = Math.abs(btime - atime); 			//12455402ms
+					document.write(delta);
+					document.write("<br />");
+					var totalSec = Math.floor(delta * .001); 		//12455s
+					document.write(totalSec);
+					document.write("<br />");
+					var hours = Math.floor(totalSec / 3600); 		//3hrs	
+					document.write(hours);
+					document.write("<br />");
+					var minutes = Math.floor(totalSec / 60) % 60; 	//27mins
+					document.write(minutes);
+					document.write("<br />");
+					var seconds = totalSec % 3600 % 60; 			//35secs
+					document.write(seconds);
+					document.write("<br />------<br />");				
+				<!-- Getting Specific Date Components -->
+					var d = new Date("Tue Jun 16 2015 04:29:37 GMT+0800");
+					document.write(d.getDate()); 			//returns 16
+					document.write("<br />");
+					document.write(d.getDay()); 			//returns 2 (i.e. Tue)
+					document.write("<br />");
+					document.write(d.getFullYear()); 		//returns 2015
+					document.write("<br />");
+					document.write(d.getHours()); 			//returns 4
+					document.write("<br />");
+					document.write(d.getMinutes()); 		//returns 29
+					document.write("<br />");
+					document.write(d.getSeconds()); 		//returns 37
+					document.write("<br />");
+					document.write(d.getTime()); 			//returns 1434400177000 (in ms since 1-1-1970 12:00:00)
+					document.write("<br />");
+					document.write(d.getTimezoneOffset()); 	//returns -480 (i.e. UTC time - local time in minutes)
+					document.write("<br />------<br />");	
+				<!-- A Comprehensive Illustrated Example-->
+					var atime = new Date("2014-01-04T08:45:22.356Z");
+					var btime = new Date("2014-01-04T12:12:57.758Z");
+					var delta = Math.abs(btime - atime); // 12455402 milliseconds
+					var totalSec = Math.floor(delta * .001); // 12455 seconds
+					var hours = Math.floor(totalSec / 3600); // 3hrs
+					var minutes = Math.floor(totalSec / 60) % 60; // 27mins
+					var seconds = totalSec % 3600 % 60; // 35secs
+					document.write("The difference between <strong>" + atime + "</strong> and <strong> \ " 
+					                     + btime + "</strong> is : <br />");
+					document.write("Total Milliseconds: " + delta + "<br>");
+					document.write("Total Seconds: " + totalSec + "<br>");
+					document.write("Delta: " + hours + "hrs ");
+					document.write(minutes + "mins " + seconds + "secs");					
+					document.write("<br />");
+			document.write("<hr />");		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

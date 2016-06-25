@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1">
+  <script src="../js/jquery-2.0.3.min.js"></script>
+  <script src="../js/initmobile.js"></script>
+  <script src="../js/jquery.mobile.js"></script>
+    <link rel="stylesheet" 
+      href="../js/css/jquery.mobile.css" />
+  <script>
+    $(document).ready(function() {
+      checkForMobile();
+    });
+  </script>
+  <style>
+  </style>
+</head>
+<body>
+<div id="border"><div id="frame">
+<div data-role="page" id="pageOne">
+  <div data-role="header"><h1>Form</h1></div>
+  <div data-role="content">
+    <div data-role="controlgroup"
+        data-type="horizontal" data-mini="true">
+      <button data-icon="grid" 
+        data-iconpos="notext">b</button>
+      <button data-icon="gear" 
+        data-iconpos="notext">b</button>
+      <button data-icon="star" 
+        data-iconpos="notext">b</button>
+    </div>
+    <div data-role="fieldcontain" class="ui-hide-label">
+        <label for="search">Search</label>
+        <input type="search" name="search" 
+          id="search" value="" />
+    </div>
+    <div data-role="fieldcontain" class="ui-hide-label">
+      <input type="text" name="username" id="username" 
+        placeholder="your name here"/>
+      <label for="username">Name</label>          
+    </div>
+    <fieldset data-role="controlgroup" data-mini="true">
+     <input type="radio" name="rc" id="rc1" value="rc1"/>
+      <label for="rc1">Family</label>
+     <input type="radio" name="rc" id="rc2" value="rc2"/>
+      <label for="rc2">Friend</label>
+    </fieldset>
+    <div data-role="controlgroup" data-type="horizontal" 
+        data-mini="true" data=theme="a">
+      <input type="checkbox" name="hcb" id="hcb1" />
+      <label for="hcb1">Post</label>
+      <input type="checkbox" name="hcb" id="hcb2" />
+      <label for="hcb2">Link</label>
+      <input type="checkbox" name="hcb" id="hcb3" />
+      <label for="hcb3">Share</label>
+    </div>      
+    <div data-role="fieldcontain" class="ui-hide-label">
+      <label for="area">Comments:</label>
+      <textarea name="textarea" id="area" data-theme="a">
+        Comments</textarea>
+    </div>
+    <button data-inline="true" 
+      data-theme="b">Accept</button>
+    <button data-inline="true" 
+      data-theme="e">Decline</button>
+</div>
+</div></div>
+</body>
+</html>

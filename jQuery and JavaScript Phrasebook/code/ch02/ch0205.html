@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Python Phrasebook</title><meta charset="utf-8" />
+<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+<script>
+  var arr1 = [-10, -5, -1, 0, 2, 6, 8];
+  var arr2 = ["a","b", "c", "A", "B", "C"];
+  arr1.sort(function(a,b){return a-b;});
+  document.write(arr1 + "<br>");
+  arr1.sort(function(a,b){return Math.abs(a)-Math.abs(b);});
+  document.write(arr1 + "<br>");
+  arr1.sort();
+  document.write(arr1 + "<br>");
+  arr2.sort();
+  document.write(arr2 + "<br>");
+  arr2.sort(function(a,b){return a.toUpperCase()>b.toUpperCase();});
+  document.write(arr2 + "<br>");
+</script>
+
+<style>
+</style>
+</head>
+<body>
+</body>
+</html>

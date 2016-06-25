@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>HTML5 : New Semantic Meanings of some text tags</title>
+		<style>
+		span {	color: green;
+				font-family: Arial;
+				font-style: normal;
+				font-size: medium;
+		}
+		span ~ code {	color: black;
+					font-weight: bold;
+		}
+		</style>
+	</head>
+	<body>
+		<article>
+		    <header><h1>Emphasizing Text : Redefining <code>&lt;em&gt;</code> &amp; <code>&lt;i&gt;</code> elements</h1></header>
+			<p><span>Verbal Stress &rarr; <code>&lt;em&gt;</code> : </span> My name is <em>Jane</em>, not John.</p>
+			<p><span>Alternate Voice &rarr; <code>&lt;i&gt;</code> : </span>Sally thought to herself, <i>when will IE6 die?</i></p>
+		</article>
+		<article>
+		    <header><h1>Adding Importance to Text : Redefining <code>&lt;strong&gt;</code> &amp; <code>&lt;b&gt;</code> elements</h1></header>
+			<p><span>Important Text &rarr; <code>&lt;strong&gt;</code> : </span><strong>Registration is required</strong> for this event.</p>
+			<p><span>Stylistically Offset Text &rarr; <code>&lt;b&gt;</code> : </span><b>Once upon a time,</b> there was a man who lost his mind.</p>
+		</article>
+		<article>
+		    <header><h1>Highlighting Text for Reference : Entirely new <code>&lt;mark&gt;</code> element</h1></header>
+			<p><span>Search Results &rarr; <code>&lt;mark&gt;</code> : </span>Your search for <mark>awesome sauce</mark> resulted in 923 entries:</p>	
+		</article>
+		<article>
+		    <header><h1>Marking Up Small Print : <code>&lt;small&gt;</code> element</h1></header>
+			<p><span>Offseting a Legal Disclaimer or a Copyright Statement &rarr; <code>&lt;small&gt;</code> :</span></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>The owner of this blog is not responsible for mind blowage. Please consume at your own risk.</small></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Copyright &copy; 2015 Awesomest Blog. All rights reserved.</small></p>	
+		</article>
+	</body>
+</html>

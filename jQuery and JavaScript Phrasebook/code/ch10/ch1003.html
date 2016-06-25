@@ -1,0 +1,39 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    var mNames = ["Jan", "Feb", "Mar", "Apr", "May", 
+      "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+    $(document).ready(function (){
+      var months = $('<select id="mon"></select>');
+      var days = $('<select id="day"></select>');
+      var years = $('<select id="year"></select>');
+      for(var i=0; i<mNames.length; i++){
+        var month = $("<option></option");
+        var v = mNames[i];
+        month.val(mNames[i]).html(mNames[i]);
+        months.append(month); }
+      for(var i=1; i<=31; i++){
+        var day = $("<option></option");
+        day.val(i).html(i);
+        days.append(day); }
+      for(var i=2010; i<=2030; i++){
+        var year = $("<option></option");
+        year.val(i).html(i);
+        years.append(year); }
+      $("body").append(months, days, years);
+      $("select").on("change", function(){
+        $("p").html($("#mon").val() +" " +
+          $("#day").val() +", " + $("#year").val());
+      });
+      $("select").attr("size", 3);
+    });
+  </script>
+</head>
+  <body>
+    <p>Date</p>
+  </body>
+</html>

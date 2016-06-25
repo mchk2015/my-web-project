@@ -1,0 +1,34 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    function updateImages(data){
+      for (i=0; i<data.length; i++){
+        var imageInfo =data[i];
+        var img = $('<img />').attr("src", 
+          "../images/"+imageInfo.image);
+        var title = $("<p></p>").html(imageInfo.title);
+        var div = $("<div></div>").append(img, title);
+        $("#images").append(div);
+      }
+    }
+    $(document).ready(function(){
+      $.get("images.json", updateImages);
+    });
+  </script>
+  <style>
+    div {border:3px ridge white; display:inline-block; 
+      box-shadow: 5px 5px 5px #888888; margin:10px; }
+    p { background-color:#E5E5E5; 
+      margin:0px; padding:3px; text-align:center; }
+    img { height:130px; vertical-align:top;  }
+    #images { background-color:black; padding:20px; }
+  </style>
+  </head>
+  <body>
+    <div id="images"></div>
+  </body>
+</html>

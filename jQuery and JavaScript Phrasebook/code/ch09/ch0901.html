@@ -1,0 +1,42 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("#cbSame").on("click", function(){
+        if($(this).is(":checked")){
+          $("#billInfo :input").attr("disabled",true); }
+        else {
+          $("#billInfo :input").removeAttr("disabled"); }
+      });
+    });
+  </script>
+  <style>
+  </style>
+</head>
+  <body>
+      <form>
+        <span>Shipping Info</span><br>
+        <div id="shipInfo">
+          <input type="text">Name</input><br>
+          <input type="text">Address</input><br>
+          <input type="text">City</input><br>
+          <select class="state" id="state"></select>
+          <input type="text">Zip</input><br>
+        </div>
+        <span>Billing Info</span><br>
+        <input type="checkbox" id="cbSame"/>
+            <label for="cbSame">Same as Shipping</label>
+        <div id="billInfo">
+          <input type="text">Name on Card</input><br>
+          <input type="text">Address</input><br>
+          <input type="text">City</input><br>
+          <select class="state" id="state"></select>
+          <input type="text">Zip</input><br>
+        </div>      
+      </form>
+  </body>
+</html>

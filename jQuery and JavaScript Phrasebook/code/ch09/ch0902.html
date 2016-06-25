@@ -1,0 +1,47 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("#tires,#model").hide();
+      $("#make").on("change", function(){
+        if($(this).val() == ""){
+          $("#tires,#model").hide(); }
+        else{ $("#model").show(); }
+      });
+      $("#modelS").on("change", function(){
+        var v = $(this).val();
+        if($(this).val() == ""){
+          $("#tires").hide(); }
+        else{ 
+          $("#tires").show(); }
+      });
+    });
+  </script>
+  <style>
+    select {width:100px; }
+  </style>
+</head>
+  <body>
+      <form>
+        <select id="make">Maker
+          <option></option>
+          <option>Jeep</option>
+        </select><label>Make</label><br>
+        <div id="model"><select id="modelS">
+          <option></option>
+          <option>Wrangler</option>
+          <option>Cherokee</option>
+        </select><label>Model</label></div>
+        <div id="tires"><select>
+          <option></option>
+          <option>32"</option>
+          <option>33"</option>
+          <option>36"</option>
+        </select><label>Tires</label></div>      
+      </form>
+  </body>
+</html>

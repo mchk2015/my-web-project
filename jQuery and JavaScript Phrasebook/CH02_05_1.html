@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Manipulating Strings</title>
+		<script type="text/javascript">
+			<!-- Getting the Length of a String -->
+				var s = "One Ring";
+				document.write("s = " + s.length); //returns 8
+				document.write("<br />");
+				var s2 = "To Rule\nThem All";
+				document.write("s2 = " + s2.length); //returns 16 as \n is only 1 character
+				document.write("<hr />");
+			
+			<!-- Finding What Character is at a Specific Location in a String -->
+				var s = "In The Darkness Bind Them";
+				document.write("s = " + s.charAt(7)); // returns 'D' when counting from 0 to 7
+				document.write("<br />");
+				document.write("s = " + s[7]); // also returns 'D' when counting from 0 to 7
+				document.write("<hr />");
+			
+			<!-- Converting Numbers to Strings -->
+				var n = 16;
+				var a = n.toString(); 
+				var b = n.toString(16);
+				document.write("a = " + a); //a = '16' as base = decimal (i.e. decimal 16 = decimal 16)
+				document.write("<br />");
+				document.write("b = " + b); //b = '10' as base - hexadecimal (i.e. decimal 16 = hexadecimal 10)
+				document.write("<hr />");				
+			
+			<!-- Converting Strings to Numbers -->
+				var n1 = new Number("16");
+				var n2 = new Number("0x20");
+				var n3 = new Number("32.8");
+				document.write("n1 = " + n1); //returns 16 as "16" is in decimal format
+				document.write("<br />");
+				document.write("n2 = " + n2); //returns 32 as "0x20" is in hexadecimal format
+				document.write("<br />");
+				document.write("n3 = " + n3); //returns 32.8 as "32.8" is in decimal format
+				document.write("<hr />");
+			
+			<!-- Combining Strings -->
+				var str1 = "jQuery";
+				var str2 = " & ";
+				var str3 = "JavaScript";
+				var str4 = str1.concat(str2, str3);
+				var str5 = str4 + " Phrasebook";
+				document.write("str4 = " + str4); //returns "jQuery & JavaScript"
+				document.write("<br />");
+				document.write("str5 = " + str5); //returns "jQuery & JavaScript Phrasebook"
+				document.write("<hr />");
+			
+			<!-- Changing String Case -->
+				var s1 = "jQuery and JavaScript";
+				var s2 = s1.toLowerCase();
+				var s3 = s1.toUpperCase();
+				document.write("s2 = " + s2); //returns "jquery and javascript"
+				document.write("<br />");
+				document.write("s3 = " + s3); //returns "JQUERY AND JAVASCRIPT"
+				document.write("<hr />");
+				
+			<!-- Slicing Strings -->
+				var s1 = "The play's the thing";
+				var s2 = s1.slice(4,8); //go to index 4 of s2 and cut/slice 4 characters out into s2
+				document.write("s2 = " + s2); //returns "play"
+				document.write("<hr />");
+				
+			<!-- Splitting Strings -->
+				var s1 = "on-the-way-to-the-forum";
+				var arr = s1.split("-");
+				document.write("arr = " + arr); //returns "on,the,way,to,the,forum"		
+				document.write("<hr />"); 
+			
+			<!-- Check to See if a String Contains a Substring -->
+				var s1 = "I think therefore I am";
+				var a = s1.indexOf("think");
+				var b = s1.indexOf("thought");
+				document.write("a = " + a); //returns 2 (i.e. at character 2 when counting from zero)
+				document.write("<br />");
+				document.write("b = " + b); //returns -1 (i.e. not found)
+				document.write("<hr />"); 
+			
+			<!-- Finding and Replacing Substrings Regardless of Case -->
+				var s1 = "jQuery, sometimes JQuery or JQUERY";
+				var s2 = s1.replace(/jQuery/gi, "jQuery"); //if g is used instead, case will be taken into account
+				document.write("s2 = " + s2); //returns "jQuery, sometimes jQuery or jQuery"			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

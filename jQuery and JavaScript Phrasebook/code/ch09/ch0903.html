@@ -1,0 +1,33 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("input[type=radio]").on("change", function(){
+        $("#cardNum").focus();
+      });
+    });
+  </script>
+  <style>
+  </style>
+</head>
+  <body>
+  <form>
+    <input type="radio" name="ptype" id="visa" />
+      <label for="visa"><img src="../images/visa.png" /></label>
+    <input type="radio" name="ptype" id="mc" />
+      <label for="mc"><img src="../images/mc.png" /></label>
+    <input type="radio" name="ptype" id="amex" />
+      <label for="amex"><img src="../images/amex.png" /></label>
+    <div id="ccInfo">        
+      <input type="text" id="cardNum">Card Number</input>        
+      <br><input type="text" id="csc">CSC</input><br>
+      <label>Expires</label><select id="expiresY"></select>
+      <select id="expiresM"></select><br>
+    </div>    
+  </form>
+  </body>
+</html>

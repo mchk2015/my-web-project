@@ -1,0 +1,28 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("#up").on("click", function(){
+        $("#photo").width($("#photo").width()*1.2);
+      });
+      $("#down").on("click", function(){
+        $("#photo").width($("#photo").width()*.8);
+      });
+    });
+  </script>
+  <style>
+    img{ vertical-align:middle;}
+    #photo { width:300px; border:5px ridge white; 
+       box-shadow: 5px 5px 5px #888888; margin:10px; }
+  </style>
+</head>
+  <body>
+    <img id="down" src="../images/decrease.png" />
+    <img id="photo" src="../images/flower.jpg" />
+    <img id="up" src="../images/increase.png" />
+  </body>
+</html>

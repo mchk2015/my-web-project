@@ -1,0 +1,25 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    var imgArr = ["bison.jpg","peak.jpg","falls.jpg"];
+    var idx = 0;
+    $(document).ready(function (){
+      $("img").on("click", function(){
+        if(idx<2) { idx++; } else { idx=0; }
+        $(this).attr("src", "../images/" + imgArr[idx]);
+      });
+    });
+  </script>
+  <style>
+    img { width:300px; border:3px ridge white; 
+       box-shadow: 5px 5px 5px #888888; margin:10px; }
+  </style>
+</head>
+  <body>
+    <img src="bison.jpg" />
+  </body>
+</html>

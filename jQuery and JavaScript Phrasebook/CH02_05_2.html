@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Manipulating Arrays</title>
+		<script type="text/javascript">
+			<!-- Combining Arrays -->
+				var fruits = ["apples", "orange", "banana"];
+				var veggies = ["spinach", "carrots", "broccoli"];
+				var grains = ["wheat", "oats"];
+				var food = grains.concat(fruits, veggies); // show wheat, oats, apples, orange, etc. to broccoli
+				document.write(food);
+				document.write("<hr />");
+			<!-- Splicing Arrays -->
+				var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; // index being 0,1,2,3,4,5,6
+				var weekdays = week.splice(1, 5); // start at index 1 and cut out 5 items into weekdays
+				document.write(weekdays); 
+				document.write("<hr />");
+			<!-- Detecting Whether an Arrays Contains an Item -->
+				var food = ["apples", "spinach", "wheat"];
+				var a = food.indexOf("wheat"); //return 2 as expected
+				var b = food.indexOf("pizza"); //return -1 to indicate non-existence of "pizza" in food
+				document.write(a);
+				document.write("<br />");
+				document.write(b);
+				document.write("<hr />");
+			<!-- Removing Items from the Array -->
+				var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+				var weekdays = week.splice(1, 5); // only Sun and Sat remain in week after splicing
+				var day = week.pop(); // Among Sun and Sat remained in week, the last item "Sat" is cut out into day
+				document.write(day); 
+				document.write("<hr />");
+			<!-- Creating a Tab-Separated String from an Array -->
+				var weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+				var weekStr = weekdays.join("\t"); // shows all items separated by a tab space
+				document.write(weekStr);
+				document.write("<hr />");
+			<!-- Sorting Arrays -->			
+				var arr1 = ["A", "C", "d", "b", "c", "B", "D", "a"];
+				var arr2 = [-5, 30, -9, -2, 0, 6, -40, 8];
+				arr1.sort(); // default sort method is excellent in sorting strings in alphabetical order
+				arr2.sort(); // BUT no good in sorting numbers as it will convert them to strings for sorting
+				             // so that -5 becomes higher than -40, and 6 becomes higher than 30!!!!
+				document.write(arr1); // shows A,B,C,D,a,b,c,d in alphabetical order as expected
+				document.write("<br />");
+				document.write(arr2); // shows -2,-40,-5,-9,0,30,6,8 which is not in numerical order at all!!!
+				document.write("<br />");
+				arr2.sort(function(a,b){return a-b;}); // in order to correct the above default sort method for 
+				                                       // numbers, a sort(function) like this must be applied.
+				document.write(arr2); // now shows -40,-9,-5,-2,0,6,8,30 which is correct in numerical order
+				document.write("<br />");
+				arr1.sort(function(a,b){return a.toUpperCase() > b.toUpperCase();}); // this sort(function) sorts
+				                                                                     // the strings like all of 
+																					 // them are in upper case
+				document.write(arr1); // shows A,a,B,b,C,c,D,d as expected
+				document.write("<br />");
+				arr2.sort(function(a,b){return Math.abs(a) - Math.abs(b);}); // this sort(function) sorts the 
+																		     // numbers like absolute numbers																			 
+				document.write(arr2); // shows 0,-2,-5,6,8,-9,30,-40 in ABSOLUTE NUMBER order					
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

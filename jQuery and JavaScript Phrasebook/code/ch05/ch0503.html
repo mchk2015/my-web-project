@@ -1,0 +1,26 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("li:eq(0)").data("race","Men");
+      $("li:eq(1)").data("race","Elves");
+      $("li:eq(2)").data({race:"Dwarves"});
+      $("li").each(function(){
+        $(this).append(" of the race of ");
+        $(this).append($(this).data("race"));
+      });
+    });
+  </script>
+</head>
+  <body>
+    <ul>
+      <li>Aragorn</li>
+      <li>Legolas</li>
+      <li>Gimli</li>
+    </ul>
+  </body>
+</html>

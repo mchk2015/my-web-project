@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript" src="local/console.message/console.message.min.js"></script>
+  <script type="text/javascript">
+  console.message()
+    .span({
+      color: 'red'
+    })
+    .text('this is red! ')
+    .span({
+      color: 'green'
+    })
+    .text('this is green! ')
+    .spanEnd()
+    .text('this is again red!')
+    .spanEnd()
+    .print();
+  </script>
+</head>
+
+<body>
+  <p>Please enable :
+    <br /> "Firebug" in Firefox (F12) or
+    <br /> "Developer's Tools" in Opera (Ctrl+Shift+J) or
+    <br /> "Javascript Console" in Google Chrome (Ctrl+Shift+J) or
+    <br /> "Developer's Tools" in Internet Explorer (F12->script->start debug) so as to see the CONSOLE.
+  </p>
+  <!-- The footer script consoleFix.js below is for fixing erratic behaviour of the console in IE8 -->
+  <footer>
+    <script type="text/javascript" src="local/consoleFix/consoleFix.js"></script>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<script>
+if (typeof(Storage) == "undefined") {
+  alert("WebStorage is not supported!");
+} else {
+  alert("WebStorage is supported!");
+}
+
+var ss = window.sessionStorage;
+var ls = window.localStorage;
+ss.setItem("Type", "Session Storage");
+ss.setItem("Place", " is stored in local");
+ls.setItem("Type", "Local Storage");
+ls.setItem("Place", "is also stored in local");
+
+alert("The first item in sessionStorage just set is : " + ss.getItem("Type"));
+alert("The second item in sessionStorage just set is : " + ss.getItem("Place"));
+alert("The first item in localStorage just set is : " + ls.getItem("Type"));
+alert("The second item in localStorage just set is : " + ls.getItem("Place"));
+
+alert("Now let's remove the first item in sessionStorage and the second item in localStorage.");
+
+alert("The first item in sessionStorage becomes : " + ss.removeItem("Type"));
+alert("The second item in sessionStorage is still : " + ss.getItem("Place"));
+alert("The first item in localStorage is still : " + ls.getItem("Type"));
+alert("The second item in localStorage becomes : " + ls.removeItem("Place"));
+
+alert("Now let's clear up all items in both sessionStorage and localStorage.");
+sessionStorage.clear();
+localStorage.clear();
+
+alert("Their values finally become " + ss.getItem("Type") + " " + ss.getItem("Place") + " " + ls.getItem("Type") + " " + ls.getItem("Place") + " respectively!");
+</script>

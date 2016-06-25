@@ -1,0 +1,42 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    function setArticle(){
+      $("#content").load($(this).attr("article")+".html");
+    }
+    $(document).ready(function(){
+      $(".navItem").click(setArticle);
+    });
+  </script>
+  <style>
+    div {display:inline-block; float:left; 
+      text-align:center; }
+    .navItem { border:1px dotted; display:block; 
+      margin:3px; cursor:pointer;}
+    #content {border:1px solid blue;}
+    #article { width: 372px; height:360px; padding:10px; 
+      overflow-y:scroll; border:1px solid;} 
+    #title { font-size:20px; display:block; 
+      background-color:black; color:white; }
+    p {background-color:#DDDDDD; border-radius:5px; }
+  </style>
+  </head>
+  <body>
+    <div>
+      <div id="leftNav">
+        <span class="navItem" article="article1">
+          jQUery Under the Hood</span>
+        <span class="navItem" article="article2">
+          jQuery Your New Best Friend</span>
+      </div>
+      <div id="content">
+        <span id="title"></span>
+        <div id="article"></div>
+      </div>
+    </div>
+  </body>
+</html>

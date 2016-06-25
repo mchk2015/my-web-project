@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    function addToList(newItem){
+      var nextItem = false;
+      $("ul li").each(function(i, item){
+        if ($(item).html() > newItem){
+          nextItem = item;
+          return false; }
+      });
+      if (!nextItem){
+       $("ul").append($("<li></li>").html(newItem)); }
+      else {
+       $(nextItem).before($("<li></li>").html(newItem));}
+    }
+    $(document).ready(function (){
+      $("input").on("keyup",function(e){
+        if (e.keyCode == 13){
+          addToList($(this).val());
+          $(this).val("");
+        }
+      });
+    });
+  </script>  
+  </head>
+  <body>
+    <p>Grocery List</p>
+    <input type="text" />
+    <ul><li>eggs</li><li>milk</li></ul>
+  </body>
+</html>

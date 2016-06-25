@@ -1,0 +1,60 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    function addTrip(data){
+      for (var idx in data){
+        var item = data[idx];
+        var div = $("<div></div>").attr("id", 
+          item.location);
+        div.append($("<img></img>").attr("src", 
+          "../images/"+item.image).addClass("photo"));
+        div.append($("<span></span>").html(
+          item.location));
+        for(var i=0;i<parseInt(item.rating);i++){
+          div.append($("<img></img>").attr("src",
+          "../images/star.ico").addClass("star")); }
+        for(var i=0;i<(5-parseInt(item.rating));i++){
+          div.append($("<img></img>").attr("src",
+          "../images/empty.ico").addClass("star")); }  
+        $("#vacations").append(div);
+      }
+      $(".star").click(sendRating);
+    }
+    function getTrips(){
+      $("#vacations").children().remove();
+      $.get("trips.json", addTrip);
+    }
+    function sendRating(){
+      var parent = $(this).parent();
+      var rating = 
+        parent.children(".star").index($(this))+1;
+      var params = [{name:"location", 
+                     value:parent.attr("id")},
+                    {name:"rating", value:rating}]
+      $.post("setRating.php", params, getTrips);
+    }
+    $(document).ready(function(){
+      getTrips();
+    });
+  </script>
+  <style>
+    #banner, #vacations { display:block; 
+      font-size:30px; width:500px;}
+    div, span { display:inline-block; 
+      width:120px; text-align:center;}
+    span { font-size:20px; }
+    .photo { height:50px;  border:5px ridge white; 
+      box-shadow: 10px 10px 5px #888888; margin:20px; 
+      border-radius:10px;}
+    .star { border:none; height:auto; width:auto; } 
+  </style>
+  </head>
+  <body>
+    <div><div id="banner">Vacations</div>
+    <div id="vacations"></div>
+  </body>
+</html>

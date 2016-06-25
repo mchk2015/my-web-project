@@ -1,0 +1,25 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200){
+        document.getElementById(
+          "message").innerHTML=xmlhttp.responseText;
+      }
+    }
+    function getEmail(){
+      var user = document.getElementById("email").value;
+      xmlhttp.open("GET","getEmail.php?user="+user);
+      xmlhttp.send();      
+    }
+  </script>
+  </head>
+  <body>
+    <input id="email" type="text" />
+    <button onclick="getEmail()">Get Email</button>
+    <p id="message"></p>
+  </body>
+</html>

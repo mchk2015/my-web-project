@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Python Phrasebook</title><meta charset="utf-8" />
+<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+<script>
+  var atime = new Date("2014-01-04T08:45:22.356Z");
+  var btime = new Date("2014-01-04T12:12:57.758Z");
+  var delta = Math.abs(btime - atime); //3935402ms
+  var totalSec = Math.floor(delta * .001); //3935s
+  var hours = Math.floor(totalSec / 3600); //1hr
+  var minutes = Math.floor(totalSec / 60) % 60; //5min
+  var seconds = totalSec % 3600 % 60; //35sec
+  document.write("Total Milliseconds: " + delta + "<br>");
+  document.write("Total Seconds: " + totalSec + "<br>");
+  document.write("Delta: " + hours + "hrs ");
+  document.write(minutes + "secs " + seconds + "s");
+</script>
+<style>
+</style>
+</head>
+<body>
+</body>
+</html>

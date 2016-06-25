@@ -1,0 +1,45 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    function failure(){ alert("Login Failed"); }
+    function success(){ alert("Login Succeeded"); }
+    function always(){ alert("Login Request done"); }
+    function login(){
+      $.get("login.php", 
+       $("#loginForm").serialize()).done(
+         success).fail(failure).always(always);
+      return false;
+    }
+    $(document).ready(function(){        
+      $("#loginButton").click(login);
+    });
+  </script>
+  <style>
+    #login { border-radius: 15px; text-align:center;
+      height:180px; width:250px; border:3px ridge blue;}
+    #title { background-color:blue; color:white;
+      border-radius:10px 10px 0px 0px; height:30px;
+      font:bold 22px arial black; }
+    input { border-radius:10px; border:3px groove blue; 
+      margin-top:20px; padding-left:10px; }
+    label { font:italic 18px arial black; }
+  </style>
+  </head>
+  <body>
+    <div id="login">
+      <div id="title">Login</div>
+      <form id="loginForm">
+        <label>Username: </label>
+        <input type="text" name="user" /><br>
+        <label>Password: </label>
+        <input type="password" name="pw" /><br>
+        <input id="loginButton" type="button" 
+               value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

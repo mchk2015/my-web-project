@@ -1,0 +1,30 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    var imgArr = ["bison.jpg","peak.jpg","falls.jpg"];
+    var idx = 0;
+    $(document).ready(function (){
+      $("img").on("click", function(){
+        $("img").css("z-index", 0);
+        $(this).css("z-index", 1);
+      });
+    });
+  </script>
+  <style>
+    img{ width:300px; border:5px ridge white; 
+       box-shadow: 5px 5px 5px #888888; position:fixed; }
+    #photo1 { top:10px; left:20px; }
+    #photo2 { top:60px; left:60px; }
+    #photo3 { top:120px; left:120px; }
+  </style>
+</head>
+  <body>
+    <img id="photo1" src="../images/arch.jpg" />
+    <img id="photo2" src="../images/beach.jpg" />
+    <img id="photo3" src="../images/flower.jpg" />
+  </body>
+</html>

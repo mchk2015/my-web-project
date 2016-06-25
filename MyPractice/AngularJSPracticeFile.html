@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>A Sample AngularJS Web Application</title>  
+  <script type="text/javascript" src="local/angularjs-1.3.16/angular.min.js"></script>
+  <!-- <script type="text/javascript" 
+          src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> -->
+  
+</head>
+
+<body>
+  <div data-ng-app>
+    單價:
+    <input type="number" min=0 ng-model="price" ng-init="price = 299">
+    <br /> 數量:
+    <input type="number" min=0 ng-model="quantity" ng-init="quantity = 1">
+    <br /> 總價: {{ quantity * price }}
+  </div>
+  <hr />
+  <div>{{ 9999 | number }}</div>
+  <div>{{ 9999+1 | number:2 }}</div>
+  <div>{{ 9*9 | currency }}</div>
+  <div>{{ 'Hello World' | uppercase }}</div>
+  <hr />
+  <div ng-init="friends = [{name:'John', age:25}, {name:'Mary', age:28}]">
+    I have {{friends.length}} friends. They are:
+    <ul>
+      <li ng-repeat="friend in friends">
+        [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div ng-show="!loggedIn">
+    點擊 <a href="#/login">這裡</a> 登錄
+  </div>
+  <hr />
+  <div ng-hide="!loggedIn">
+    點擊 <a href="#/login">這裡</a> 登錄
+  </div>
+  <hr />
+</body>
+
+</html>

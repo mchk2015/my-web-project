@@ -1,0 +1,40 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+  var images = ["arch", "flower", "sunset2",  
+                "tiger", "falls", "volcano",
+                "beach", "img1", "flower2"];
+    function addImages(){
+      for (i in images){
+        var imgbox = $("<span></span>");
+        var img = $("<img></img>");
+        var label = $("<p></p>").html(images[i]);
+        img.attr("src", "../images/"+images[i] + ".jpg");
+        imgbox.append(label, img );        
+        $("div").append(imgbox); }
+    }
+    $(document).ready(function (){
+      addImages();
+    });
+  </script>
+  <style>
+    div, img  { border:5px ridge white; 
+      box-shadow:10px 10px 5px #888888; }
+    div { background-color:black; 
+      width:660px; height:520px }
+    span { display:inline-block; width:200px; 
+      text-align:center; margin:10px; }
+    p {color:white; margin:0px; 
+      background-color:#3373A5; font-weight:bold; }
+    img { height:100px; margin:10px;} 
+  </style>
+  </head>
+  <body>
+    <div>      
+    </div>
+  </body>
+</html>

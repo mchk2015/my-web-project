@@ -1,0 +1,24 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).ready(function (){
+      $("button").on("click", function(){
+        $("div").prepend("<p>Paragraph 1</p>");
+        $("div p:eq(1)").after("<p>Paragraph 3</p>");
+        $("div").append("<p>Paragraph 5</p>");        
+      });
+    });
+  </script>
+</head>
+  <body>
+    <button>Add Paragraphs</button>
+    <div>
+      <p>Paragraph 2</p>
+      <p>Paragraph 4</p>
+    </div>
+  </body>
+</html>

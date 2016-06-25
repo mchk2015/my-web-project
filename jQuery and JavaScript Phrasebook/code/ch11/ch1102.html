@@ -1,0 +1,52 @@
+<html>
+  <head>
+  <title>Python Phrasebook</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" 
+    src="../js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" 
+    src="../js/jquery-ui-1.10.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" 
+    href="../js/css/jquery-ui-1.10.3.min.css">
+  <script>
+    $(document).ready(function(){
+      $("#drag1, #drag2, #drag3").draggable(
+        {helper:"clone", cursor:"move", 
+         opacity:.7, zIndex:99});
+      $("#drop").droppable({accept:"img", 
+        tolerance:"intersect", hoverClass:"drop-hover"});
+      $("#drop").on("drop", function(e,ui){
+        var item = $("<div></div>");
+        item.append($("<img></img>").attr("src", 
+          ui.draggable.attr("src")));
+        item.append($("<span></span>").html(
+          ui.draggable.attr("src")));
+        $(this).append(item);
+      });
+    });
+  </script>
+  <style>
+    div {display:inline-block; vertical-align:top; 
+      margin:10px;}
+    img {width:100px; margin:0px; }
+    #images { width:100px; height:300px; }
+    #drop { width:300px; min-height:150px; padding:3px;
+      border:3px ridge white; box-shadow: 
+      5px 5px 5px #888888; }
+    #drop div{ height:80px; width:280px; padding:4px; 
+      border:2px dotted; margin-top:5px; }
+    #drop div img {height:80px; margin-right:10px; }
+    #drop div span { display:inline-block; 
+      vertical-align:top; font:16px/70px arial; }
+    .drop-hover { background-color:#BBDDFF; }
+  </style>
+  </head>
+  <body>
+    <div id="images">
+      <img id="drag1" src="../images/lake.jpg" />
+      <img id="drag2" src="../images/tiger.jpg" />
+      <img id="drag3" src="../images/volcano.jpg" />
+    </div>
+    <div id="drop"></div>
+  </body>
+</html>
