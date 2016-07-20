@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Fill-in-the-blank Demo 2</title>
+    <style type="text/css">
+        .draggable {
+            background-color:#00ff00;
+            margin:5px;padding:3px;
+        }
+        #div1,#div2 {
+            display:inline-block;
+            min-width:25px;
+            min-height:10px;
+            border-style:solid;
+            border-width:0px;
+            border-bottom-width:2px;
+        }
+    </style>
+    <script type="text/javascript">
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+        function drag(ev){
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+            ev.target.parentNode.replaceChild(document.getElementById(data), ev.target);
+            document.getElementById(data).className = "";
+        }
+    </script>
+
+
+<body>
+
+    <span class="draggable" id="drag1" draggable="true" ondragstart="drag(event)">drag</span>
+    <span class="draggable" id="drag2" draggable="true" ondragstart="drag(event)">drop</span>
+    <br />
+    This is a sample <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    and <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div> sentence.
+    
+    <p><input type="button" value="CLEAR" name="btn1" onclick="clearUp()" /></p>
+    <script type="text/javascript">
+        function clearUp() {
+            location.reload();
+        }
+    </script>
+  
+</body>
+
+</html>

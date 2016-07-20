@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    
+    <title>Fill-in-the-blank Demo 1</title>
+    
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Boogaloo|Roboto+Slab' />
+    
+    <style type="text/css">
+        * {     
+            margin: 0px;        
+            border: 0px;  
+            padding: 0px; 
+        }    
+        #wrapper {
+            margin: 0 auto;
+        }
+        body, p {          
+            font-family: 'Roboto Slab', serif;
+            margin: 0px;    
+            font-size: 16px; 
+            line-height: 180%;   
+            text-align: left;      
+            background-color: #F5F5F5;
+        }
+        h3 {
+            font-family: arial; 
+            font-size: 1.5em;  
+            font-weight: bold;
+            color: green;     
+        }             
+        input   {
+            font-family: 'Roboto Slab', serif;
+            font-size: 16px;
+            color: green;
+        }
+        
+        span {
+            color: blue;
+        }
+        input { 
+            text-align: center; 
+        }
+        section {
+            margin: 0px 35px;
+            border: 0px;     
+            padding: 30px 0px 10px 50px;            
+            background-color: #F5F5F5;
+        }
+        #myForm {
+            margin: 15px 0px 15px 0px;
+            border: solid 2px #A0A0A0;
+            border-radius: 15px;
+            padding: 20px 30px;     
+        }
+        button[type="submit"] {
+            background-color: #4CAF50; 
+            border-radius: 12px;
+            color: white;
+            padding: 15px 36px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button[type="reset"] {
+            background-color: black;
+            border-radius: 12px;
+            color: white;
+            padding: 12px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        button[type="button"] {
+            background-color: blue; 
+            border-radius: 12px;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        var modelAnswer = ["in", "Hello", "hookers"];  // Provide your answer here to each question you add.
+        
+        function checkAnswer() {
+            var score = 0;
+            var i;
+            for (i=1; i<=modelAnswer.length; i++) {
+                document.getElementById("ans" + i).innerHTML = "";
+                if (document.getElementById("yourAnswer" + i).value.trim() === modelAnswer[i-1]) {
+                    score = score + 1;
+                } else {
+                    document.getElementById("ans" + i).innerHTML = " <= Wrong, please correct and submit!".fontcolor("red");
+                }
+            }
+            alert("Great, you answered " + score + " question(s) correctly !");
+        }         
+        function getAnswer() {
+            var i;
+            for (i=1; i<=modelAnswer.length; i++) {
+            document.getElementById("ans" + i).innerHTML = " <= " + modelAnswer[i-1]; 
+            }
+        }    
+        function clearUp() {
+            document.getElementById("myForm").reset();
+            var i;
+            for (i=1; i<=modelAnswer.length; i++) {
+                document.getElementById("ans" + i).innerHTML = "";
+            }
+        }       
+    </script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <section>
+            <h3> Fill in the Blank Quiz (with correct case and tense) :</h3>
+            
+            <form id="myForm">
+                <p>1. Fill <input type="text" id="yourAnswer1" size="10" /> the blank.       <span id="ans1"></span></p>
+                <p>2. <input type="text" id="yourAnswer2" size="10" /> world!                <span id="ans2"></span></p>
+                <p>3. Hookers! They're all <input type="text" id="yourAnswer3" size="10" />! <span id="ans3"></span></p>
+                <!-- Add more questions here. -->
+                
+                <br />
+                <p style="text-align: center">~ END ~</p>
+            </form>
+            
+            <p style="text-align: right">
+                <button type="submit" onclick="checkAnswer()">SUBMIT</button>
+            </p>                
+        </section> 
+        
+        <section>              
+            <br />
+            <br />
+            <br />
+            <p style="text-align: left">
+                    <button type="reset" onclick="clearUp()">RESET</button>
+            </p>             
+            <br />
+            <br />
+            <p style="text-align: center">
+                    <button type="button" onclick="getAnswer()">SHOW ME THE ANSWER!</button>
+            </p>
+            
+        </section>           
+    </div>  
+</body>
+
+</html>
