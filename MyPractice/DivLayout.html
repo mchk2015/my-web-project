@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Using div to make a layout</title>
+    <link href="css/layout-by-div.css" rel="stylesheet" type="text/css">    
+</head>
+
+<body>
+    <h1>Simple Layout by using div tags</h1>
+    
+    <div class="row">
+        <div class="smallcol">50px</div>
+        <div class="smallcol">50px</div>
+        <div class="largecol">200px</div>        
+    </div>
+    
+    <div class="row">
+        <div class="mediumcol">100px</div>
+        <div class="mediumcol">
+            <div class="row">
+                <div class="smallcol">50px</div>
+                <div class="smallcol">50px</div>
+            </div>
+        </div>
+        <div class="mediumcol">100px</div>
+    </div>
+    
+    <div class="row">
+        <div class="mediumcol">
+            100px
+        </div>
+        <div class="largecol">
+            <div class="row">
+                <div class="largecol">200px</div>						
+            </div>           
+            <div class="row">
+                <div class="mediumcol">100px</div>						
+                <div class="mediumcol">100px</div>		
+            </div>
+        </div>
+	</div>
+    
+    <div class="row">
+        <div class="largecol">200px</div>
+        <div class="mediumcol">
+            <div class="row">
+                <div class="smallcol">50px</div>						
+                <div class="smallcol">50px</div>		
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>

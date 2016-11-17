@@ -1,0 +1,24 @@
+.row{
+    clear: both;    
+}
+
+.smallcol{
+    float: left;
+    width: 50px;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.mediumcol{
+    float: left;
+    width: 104px;
+    border: 1px solid green;
+    text-align: center;
+}
+
+.largecol{
+    float: left;
+    width: 212px;
+    border: 1px solid blue;
+    text-align: center;
+}
