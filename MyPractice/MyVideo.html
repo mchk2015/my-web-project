@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Display a Video in HTML5</title>
+	<meta name="description" content="How to Display a Video with Endless Autoplay">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Michael Chan">
+</head>
+<body>
+	<!-- For Firefox, a link to a website's mp4 can play fine
+	but a direct play of local mp4 is not supported due to
+	license fee issue. To play locally, use webm instead.
+	For Chrome, mp4 plays fine locally and in link to any 
+	websites. -->
+	<video controls autoplay loop height="200" width="400">
+		<source src="docs-assets/video/hongkong.mp4" type="video/mp4">
+		<source src="docs-assets/video/hongkong.webm" type="video/webm">
+	</video>
+</body>
+</html>
+
+
+

@@ -5,13 +5,13 @@ $pageStart =
 <html lang="en">
 
     <head>
-        <meta charset=utf-8" />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <title>MY WEBSITE PAGE</title>
-        <link type="text/css" href="./local/jquery-ui-1.11.4/themes/ui-lightness/jquery-ui.min.css" rel="stylesheet" />
-        <script type="text/javascript" src="./local/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
-        <script type="text/javascript" src="./local/jquery-ui-1.11.4/jquery-ui.min.js"></script>
-        <script type="text/javascript">
+        <title>MY HTML5 WEBSITE PAGE</title>
+        <link rel="stylesheet" href="./local/jquery-ui-1.11.4/themes/ui-lightness/jquery-ui.min.css" />
+        <script src="./local/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+        <script src="./local/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <script>
             $(document).ready(function() {
                 $("#date1").datepicker();
             });

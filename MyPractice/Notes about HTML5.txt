@@ -1,0 +1,36 @@
+
+I don・t think I・ve ever actually written out a Document Type Declaration or
+doctype. I・ve cut-and-pasted one more times than I can remember, but usually
+I let my HTML editor insert one for me.
+
+HTML5・s doctype is short and simple. No version number, no language, no URI:
+<!DOCTYPE html>
+
+HTML5・s doctype is case-insensitive too, so we can write it as <!doctype html> ,
+<!DOCTYPE html> or even <!Doctype HTML> .
+
+Doctypes weren・t intended to be read by humans, and not even browsers
+really need them, except to ．switch doctype・ between their quirks and
+standards modes. In fact, we could leave out a doctype altogether and our
+documents would still be valid HTML5.
+
+The doctype isn・t the only thing that・s got shorter in HTML5: character
+encoding has too. Here・s a meta element for a document written in HTML 4.01:
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+This is shortened in HTML5 to just:
+<meta charset="UTF-8">
+
+We now needn・t specify a type value of text/css on every link to every style
+sheet. We can simply write:
+<link rel="stylesheet" href="main.css">
+
+Because browsers don・t need it, we can forget text/javascript applied to
+scripts too, and simply write:
+<script src="modernizr-1.5.js"></script>
+
+HTML5 isn・t fussy about how we write our markup either. Whether we like
+lower case, upper case or mixed case HTML elements, we can use our preferred
+style in HTML5. If we learned to write XHTML 1.0-style lower case elements,
+that・s fine in HTML5 too. Whether we self-close images or not, or use quote
+marks around our attributes or not, HTML5 won・t mind. Neither will browsers,
+so we can carry on writing HTML in whatever style we prefer.

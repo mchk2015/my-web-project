@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Playing with Rx and CSS Variables</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/2.3.25/rx.lite.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/davidmerfield/randomColor/master/randomColor.js"></script>
+    <style type="text/css">
+        :root{
+        --fontSize: 130px;
+        --color: #b20e13;
+        }
+        
+        body{
+            background: #171717;
+        }
+        body:before {
+          content: "Abdullah AbuSall (abdullah.abusall@gmail.com)" "\aRx and CSS variables play very nice!";
+          display: block;
+          width: 360px;
+          position: absolute;
+          top: 10px;
+          line-height: 2em;
+          color: var(--color);
+          font-family: monospace;
+        }
+
+        textarea{
+            font-size: var(--fontSize);
+            color: var(--color);
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea rows="6" placeholder="Input text here" id="field"></textarea>
+    
+    <script>
+        (function() {
+            var state$ = null,
+            style = document.documentElement.style,
+            $input = document.getElementById('field'),
+            keyup = Rx.Observable.fromEvent($input, 'keyup')
+            .map(function(e) {
+                return e.target.value;
+            });
+
+            keyup.forEach(changeSize);
+
+            function changeSize(input) {
+
+                state$ = (input.length ? 150 - (input.length < 45 ? input.length * 2.5 : 19) : 130) + 'px';
+                style.setProperty('--fontSize', state$)
+
+                style.setProperty('--color', randomColor({
+					luminosity: 'bright'
+				}));
+
+            }
+        })();
+    </script>
+</body>
+</html>
