@@ -1,7 +1,7 @@
 Study Schedule 
 --------------
 
-|  |  |  | SUBJECT |  |  |
+|  | SUBJECT |
 |---|:---:|:---:|:---:|:---:|---:|
 | **AREA** | **Major** | **Foundation** | **Elegant** | **Versatile** | **Special** |
 | NATURAL LANGUAGES | English | Chinese | Japanese | Translation | _latin_ |
