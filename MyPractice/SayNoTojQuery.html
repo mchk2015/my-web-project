@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Say No to jQuery</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">	
+	<style>
+		html,
+		body {
+			max-width: 40em 											!important;
+			margin-left: auto 										!important;
+			margin-right: auto 										!important;
+			padding: 5px 10px 20px 10px 								!important;
+			font-family: "Source Sans Pro", "Arial", sans-serif	!important; 
+			font-size: 1.1rem 										!important;			
+		}
+		#myHeader {
+			text-transform: uppercase 				!important;			
+			text-shadow: 2px 4px 10px red 			!important;
+			padding-bottom: 20px 						!important;
+			text-align: center 						!important;
+			font-size: 2.5rem 						!important;
+			font-weight: 700							!important;
+		}
+		#myArticle h2 {
+			font-size: 1.8rem 						!important;
+			font-variant: small-caps 					!important;
+			font-weight: 700							!important;
+		}
+		#myFooter {
+			font-family: fantasy 						!important;
+			color: light-gray 						!important;
+			text-align: right 						!important;
+		}
+		#editor1,
+		#editor2,
+		#editor3 { 
+			height: 200px 								!important;
+			width: 650px								!important;
+		}
+		.output {	
+			max-width: 40rem 							!important;
+			margin-right: auto						!important;
+			margin-left: auto 						!important;
+			background-color: gray	 				!important;
+			padding: 5px 15px 5px 30px 				!important;
+			font-family: Monaco, monospace			!important;
+			font-size: 0.8rem 						!important;
+			color: white								!important;
+		}
+	</style>	
+</head>
+<body>
+
+	<header id="myHeader">
+		<div>10 Tips for Writing JavaScript without jQuery</div>
+	</header>
+	
+	<article id="myArticle">
+	
+		<section>
+			<h2>1. Listening for Document Ready</h2>	
+<!-- Ace Editor #1 -->
+<div class="container">
+<div class="panel panel-default">
+<div class="panel-heading">JavaScript</div>
+<div class="panel-body">
+<div id="editor1">document.addEventListener("DOMContentLoaded", function(){
+		var line1 = "All content has been loaded"; 
+		var line2 = " and you can proceed to read it now!";
+		document.getElementById("output1").innerHTML = line1 + line2;
+});</div>
+</div>
+</div>
+<div><br /></div>
+</div>				
+			<script>
+				document.addEventListener("DOMContentLoaded", function(){
+					var line1 = "All content has been loaded"; 
+					var line2 = " and you can proceed to read it now!";
+					document.getElementById("output1").innerHTML = line1 + line2;
+				});
+			</script>		
+			
+			<div>Output</div>
+			<div class="output">
+				<div id="output1"></div>
+			</div>			
+			
+		</section>
+<hr />		
+		<section>
+			<h2>2. Selecting Elements</h2>
+<!-- Ace Editor #2 -->			
+<div class="container">
+<div class="panel panel-default">
+<div class="panel-heading">HTML</div>
+<div class="panel-body">
+<div id="editor2"><pre>&lt;ul&gt;
+	&lt;li class="monsters"&gt;Nessy&lt;/li&gt;
+	&lt;li class="monsters"&gt;Big foot&lt;/li&gt;
+	&lt;li class="monsters"&gt;Frankenstein&lt;/li&gt;
+&lt;/ul&gt;</pre></div>
+</div>
+</div>
+<div><br /></div>
+</div>	
+			<div style="display: none">
+			<ul>
+				<li class="monsters">Nessy</li>
+				<li class="monsters">Big foot</li>
+				<li class="monsters">Frankenstein</li>
+			</ul>	
+			</div>
+<!-- Ace Editor #3 -->			
+<div class="container">
+<div class="panel panel-default">
+<div class="panel-heading">JavaScript</div>
+<div class="panel-body">
+<div id="editor3">var firstObj = document.querySelector(".monsters");
+document.getElementById("output2_1").innerHTML = "It's from Scotland - " + firstObj.textContent;
+
+var scaryObj = document.querySelectorAll(".monsters");
+document.getElementById("output2_2").innerHTML = "Do you know the following monsters?";
+for (var i=0; i&lt;scaryObj.length; i++) {
+	document.getElementById("output2_2_" + [i]).innerHTML = scaryObj[i].innerHTML;
+}</div>
+</div>
+</div>
+<div><br /></div>
+</div>					
+			<div>Output</div>
+			<div class="output">
+				<div id="output2_1"></div>
+				<div id="output2_2"></div>
+				<div id="output2_2_0"></div>
+				<div id="output2_2_1"></div>
+				<div id="output2_2_2"></div>
+			</div>
+			
+			<script>
+				var firstObj = document.querySelector(".monsters");
+				document.getElementById("output2_1").innerHTML = "It's from Scotland - " + firstObj.textContent;
+				
+				var scaryObj = document.querySelectorAll(".monsters");
+				document.getElementById("output2_2").innerHTML = "Do you know the following monsters?";
+				for (var i=0; i<scaryObj.length; i++) {
+					document.getElementById("output2_2_" + [i]).innerHTML = scaryObj[i].innerHTML;
+				}		
+			</script>			
+		</section>	
+<hr />			
+		<section>
+			<h2>3. Attaching and Removing Event Listeners</h2>
+			<script></script>
+		</section>
+	
+	</article>	
+	
+	<footer id="myFooter">
+		<div>Created by MCHK@2016</div>
+	</footer>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+	<script>
+	// Declaration of multiple Ace Editors 
+      var editor1= ace.edit("editor1");
+      editor1.setTheme("ace/theme/monokai");
+      editor1.session.setMode("ace/mode/javascript");
+	  editor1.setReadOnly(true);
+	  document.getElementById('editor1').style.fontSize='14px';
+	  
+	  var editor2= ace.edit("editor2");
+      editor2.setTheme("ace/theme/monokai");
+      editor2.session.setMode("ace/mode/html");
+	  editor2.setReadOnly(true);
+	  document.getElementById('editor2').style.fontSize='14px';
+	  
+	  var editor3= ace.edit("editor3");
+      editor3.setTheme("ace/theme/monokai");
+      editor3.session.setMode("ace/mode/javascript");
+	  editor3.setReadOnly(true);
+	  document.getElementById('editor3').style.fontSize='14px';
+	</script>	
+	
+</body>
+</html>

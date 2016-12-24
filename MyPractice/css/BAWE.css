@@ -1,0 +1,73 @@
+html,
+body {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-size: 12.5px;
+	overflow-x: hidden;
+	text-align: justify;
+	margin: 0px;
+}
+header {
+	font-size: 2.0rem;
+	font-variant: small-caps;
+	text-align: center;
+}
+p {
+	font-family: Monaco, monospace;
+	font-size: 1.2rem;
+	white-space: pre-line;
+	color: white;
+}
+.release {
+	margin-left: calc(-50vw + 64.5%);
+	margin-right: calc(-50vw + 35.5%);
+}
+.abstract {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;	
+	padding-bottom: 3rem;
+	font-family: Monanco, monospace;
+	font-size: 1.8rem;
+	font-variant: normal;	
+	text-align: justify;
+	
+}
+.discipline {
+	max-width: 100%;
+	padding: 10px 0px 0px 40px;
+	background-color: #abec65;
+	font-size: 1.8rem;
+	
+}
+.module {
+	max-width: 95%;
+	margin-left: auto;
+	padding: 8px 0px 0px 25px;
+	background-color: #65ecea;	
+	font-size: 1.6rem;
+
+}
+.title {
+	max-width: 90%;
+	margin-left: auto;
+	padding: 8px 25px 0px 25px;
+	background-color: #a665ec;
+	font-size: 1.4rem;
+	
+}
+.BAWEWriting {
+	max-width: 95%;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 8px 36px;
+	background-color: #ec6568;	
+}
+.reference {
+	font-family: Monaco, monospace;
+	font-size: 1rem;
+	white-space: pre-line;
+	background-color: cornsilk;
+	padding: 10px 30px 15px 30px;
+}
+
+
