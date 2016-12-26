@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>LIHKG Web Apps</title>
+	<style>	
+	body {
+		margin: 0px;
+		font-family: sans-serif;
+		background-color: lightgray;
+	}
+	img {
+		height: 120px;
+		width: 450px;
+	}
+	td a {
+		margin: 15px;
+	}
+	#head {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: darkslategray;
+		text-align: center;
+		margin-top: -10px;
+		margin-bottom: -20px;
+	}
+	#date {
+		text-align: right;
+		margin-right: 20px;
+	}
+	#foot {
+		font-size: 1rem;
+		font-weight: bold;
+		color: lightslategray;
+		text-align: right;
+		margin-right: 20px;
+	}
+	.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+	}
+
+	.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+	}
+
+	.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+	</style>
+</head>
+
+<body>
+	<header id="head"><h1>LIHKG Web Apps 四 大 天 王</h1></header>
+	<div id="date">今日 : <span id="dateToday"></span></div>
+	
+	<table>
+		<tr>
+			<th><div class="tooltip"><h1>Official</h1><span class="tooltiptext">https://lihkg.com</span></div></th>
+			<th><div class="tooltip"><h1>na.cx</h1><span class="tooltiptext">https://lihkg.na.cx</span></div></th>
+		</tr>
+		<tr>
+			<td><a href="https://lihkg.com"><img src="http://i.imgur.com/92FPnDF.jpg" alt="official"></a></td>
+			<td><a href="https://lihkg.na.cx"><img src="http://i.imgur.com/8bspTZS.jpg" alt="na.cx"></a></td>			
+		</tr>
+		<tr>
+			<th><div class="tooltip"><h1>daarj</h1><span class="tooltiptext">https://lihkg.daarj.com</span></div></th>
+			<th><div class="tooltip"><h1>firebaseapp</h1><span class="tooltiptext">https://lihk-forum.firebaseapp.com
+</span></div></th>
+		</tr>
+		<tr>
+			<td><a href="https://lihkg.daarj.com"><img src="http://i.imgur.com/NcWsZK2.jpg" alt="daarj"></a></td>
+			<td><a href="https://lihk-forum.firebaseapp.com"><img src="http://i.imgur.com/3NLkxHf.jpg" alt="firebaseapp"></a></td>
+		</tr>
+	</table>
+	<p></p>
+	<p></p>
+	<footer>
+	<script type="text/javascript">
+		function dateNow() {
+			var dn = new Date();
+			return (dn.getFullYear()+"年" + (dn.getMonth()+1) +"月" + dn.getDate()+"日");
+		}		
+		document.getElementById("dateToday").innerHTML = dateNow();
+	</script>
+		<div id="foot">Created by MCHK&copy;2016</div>
+	</footer>
+</body>
+</html>
