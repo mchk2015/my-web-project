@@ -1,6 +1,6 @@
 <?php
 $pageStart = 
-'<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -36,6 +36,4 @@ $pageStart =
     </body>
     
 </html>';
-
 print $pageStart;
-?>

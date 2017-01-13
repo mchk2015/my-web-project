@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HTML5 Standard Template</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+
+</head>
+
+<body>
+	<h1>Hello World</h1>
+	<div>The Task is to retrieve text inside the &lt;h1&gt; tag.</div>
+	<script>		
+		document.write("<h2>" + "Using Vanilla JavaScript 1: " + "</h2>");
+		var x = document.getElementsByTagName("h1")[0].innerHTML; // for simple selectors
+		document.write("<p>" + x + "</p>");
+		
+		document.write("<h2>" + "Using Vanilla JavaScript 2: " + "</h2>");
+		var y = document.querySelector("h1").innerHTML;  // for complex selectors
+		<!-- OR var y = document.querySelectorAll("h1")[0].innerHTML; -->
+		document.write("<p>" + y + "</p>");		
+		
+		document.write("<h2>" + "Using jQuery: " + "</h2>");
+		var z = $("h1").text(); 
+		document.write("<p>" + z + "</p>");
+		
+		
+	</script>
+</body>
+</html>

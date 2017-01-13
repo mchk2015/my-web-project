@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Syntax Highter</title>	
+	<!-- SyntaxHighter:  -->	
+	<!-- Include required JS files -->
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+	<!-- At least one brush for every language you want to highlight:
+			bash: shBrushBash.js
+			csharp: shBrushCSharp.js
+			cpp: shBrushCpp.js
+			css: shBrushCss.js
+			delphi:	shBrushDelphi.js	
+			erlang:	shBrushErlang.js	
+			javascript:	shBrushJScript.js
+			java: shBrushJava.js
+			javafx: shBrushJavaFX.js
+			perl: shBrushPerl.js
+			php: shBrushPhp.js
+			plain: shBrushPlain.js
+			powershell: shBrushPowerShell.js
+			python: shBrushPython.js
+			ruby: shBrushRuby.js
+			scala: shBrushScala.js
+			sql: shBrushSql.js
+			vb: shBrushVb.js
+			xml: shBrushXml.js
+	-->	
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushBash.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCpp.js" type="text/javascript"></script>	
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js" type="text/javascript"></script>	
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushDelphi.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushErlang.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script>	
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJavaFX.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPerl.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPhp.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPlain.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPowerShell.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushRuby.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushScala.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushSql.js" type="text/javascript"></script>	
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushVb.js" type="text/javascript"></script>
+	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script>
+	<!-- Include at least the core style and default theme :
+			Default, Django, Eclipse, Emacs, FadeToGrey, MDUltra, Midnight, RDark
+	-->
+	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCoreDefault.css" rel="stylesheet" type="text/css" />
+	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />	
+	<style>
+	
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1><a href="http://alexgorbatchev.com/SyntaxHighlighter/">Syntax Highter</a></h1>			
+	</header>
+	<pre class="brush: plain">
+		SYNTAX HIGHTER BY EXAMPLES
+	</pre>
+	
+	<pre class="brush: javascript">
+		// JavaScript
+		// Different Ways (See http://goo.gl/Xz7RP2) to Define Functions:
+		function a(){};             		// function declaration
+		var b = function(){};       		// function expression
+		var c = (function(){});     		// function expression with grouping operators
+		var d = function foo(){};   		// named function expression
+		var e = (function(){        		// IIFE that returns a function
+					return function(){}
+				})();
+		var F = new Function();     		// function constructor (starts with a capital letter)
+		var G = new function foo(){};   	// special case: object constructor
+		var h = x => x * 2;				// ES6 arrow function
+		
+		// IIFE:
+		(function(){console.log("Hello World!");}());   	// Pattern 1: ((){}());
+		(function(){console.log("Hello World!");})();		// Pattern 2: ((){})();
+		+function(){console.log("Hello World!");}();		// Pattern 3: ?(){}();
+		-function(){console.log("Hello World!");}();	 	//  where ? can be		
+		~function(){console.log("Hello World!");}();		//  +,-,~,!,void,etc.
+		!function(){console.log("Hello World!");}();
+		void function(){console.log("Hello World!");}();
+		0,function(){console.log("Hello World!");}();
+		(function(x){return x;}("Hello World"));
+		(function(x){return x;})("Hello World");
+		// IIFE with Arrow function:
+		(() => {console.log("Hello World!");})();			// Pattern A: (()=>{})(); 
+		(() => "Hello World!")();							// Pattern B: (()=>)();
+		((x) => {return x;})("Hello World!");
+		((x) => x)("Hello World!");
+		(x => {return x;})("Hello World!");				// Pattern C: (=>{})();
+		(x => x)("Hello World!");	  						// Pattern D: (=>)();
+	</pre>
+	
+	<pre class="brush: cpp">
+		/* ANSI C */
+		#include &lt;stdio.h&gt;
+		#include &lt;stdlib.h&gt;
+
+		int main() {
+			printf("Hello World!\n");
+			system("PAUSE");   
+			return 0;      
+		}
+	</pre>
+	
+	<pre class="brush: cpp">
+		// C++ 
+		#include &lt;iostream&gt;
+		
+		int main() {
+			std::cout << "Hello World!" << std::endl;
+			return 0;
+		}
+	</pre>
+	
+	<pre class="brush: java">
+		// Java
+		public class HelloWorld {
+			public static void main(String[] args) {
+				System.out.println("Hello World!");
+			}
+		}
+	</pre>
+	
+	<footer>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+		<script type="text/javascript">			
+			SyntaxHighlighter.all();
+		</script>
+	</footer>
+</body>
+
+</html>
+</pre>
