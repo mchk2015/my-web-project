@@ -3,17 +3,32 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>HTML5 Template</title>		
+	<title>HTML5 Template with jQuery</title>
+
+	<!-- jQuery -->
+	<script src="../local/jquery-3.2.0/jquery-3.2.0.min.js"></script>
+	<script>
+			$( document ).ready( function() {
+				alert("jQuery is working!");	
+			});
+	</script>
+	
 	<!-- Custom external stylesheet -->
 	<link rel="stylesheet" href="main.css" type="text/css" />
-	<!-- Custom internal stylesheet -->
+		<!-- Custom internal stylesheet -->
 	<style>	
-	</style>
+		p:first-letter {
+			font-size: 200%;
+			font-weight: bold;
+			font-family: sans-serif;			
+		}
+	</style>	
+	
 </head>
 
 <body>
 	<header>
-		<h1>Hello World!</h1>	
+		<h1>Hello jQuery!</h1>			
 	</header>
 	
 	<section>
@@ -27,9 +42,10 @@
 		</p>
 	</section>
 	
-	<footer>		
+	<footer>
 		MCHK@2017
-	</footer>
+	</footer>	
+	
 	<!-- Custom external javascript -->
 	<script src="main.js" type="text/javascript"></script>
 	<!-- Custom internal javascript -->

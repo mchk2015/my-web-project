@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax Page - TeX and LaTeX Support</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<body>
+
+	When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+	$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+<br />	
+	$$\lim_{x\rightarrow\infty}\frac1x=0$$
+<br />
+	The array of formula is left-justified: 
+	$\begin{array}{l}
+		\frac12\;\;\frac{\sqrt x}3 \\
+		\sum_{i=0}^n = n_0 + ... + n_{10} \\
+	\end{array}$
+<br />
+<br />
+	The array of formula is center-justified: 
+	$\begin{array}{c}
+		{\mathrm H}_2\left(\mathrm g\right)+{\mathrm O}_2\left(\mathrm g\right)\rightleftharpoons2{\mathrm H}_2\mathrm O\left(\mathrm l\right) \\
+		5x=3x+2 \\
+		2x=2 \\
+		x=1 \\	
+	\end{array}$
+<br />
+<br />
+	The array of formula is right-justified:
+	$\begin{array}{r}
+		\begin{pmatrix}a&b\\c&d\end{pmatrix} \\
+		\begin{pmatrix}10&20\\50&10\end{pmatrix} \\
+		\begin{pmatrix}100&200\\150&150\\500&100\end{pmatrix} \\
+	\end{array}$
+
+</body>
+</html>

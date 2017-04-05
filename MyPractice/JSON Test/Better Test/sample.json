@@ -1,0 +1,17 @@
+{
+	"Musical Instruments" : {
+		"type" : ["woodwind", "brass", "string", "keyboard"],
+		"price" : 10000,
+		"sale" : true
+	},
+	"HiFi and Accessories" : {
+		"type" : ["cd player", "md recorder", "earphone", "headphone", "amplifier"],
+		"price" : 1000,
+		"sale" : true
+	},
+	"Books" : {
+		"type" : ["textbooks", "novel", "reference", "languages"],
+		"price" : 100,
+		"sale" : false
+	}
+}
